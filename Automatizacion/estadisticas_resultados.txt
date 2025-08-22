@@ -1,0 +1,178 @@
+{
+    "1982": {
+        "total": 81,
+        "espanolas": 0
+    },
+    "1983": {
+        "total": 106,
+        "espanolas": 0
+    },
+    "1984": {
+        "total": 9,
+        "espanolas": 0
+    },
+    "1985": {
+        "total": 84,
+        "espanolas": 0
+    },
+    "1986": {
+        "total": 245,
+        "espanolas": 0
+    },
+    "1987": {
+        "total": 50,
+        "espanolas": 0
+    },
+    "1988": {
+        "total": 179,
+        "espanolas": 0
+    },
+    "1989": {
+        "total": 224,
+        "espanolas": 0
+    },
+    "1990": {
+        "total": 203,
+        "espanolas": 0
+    },
+    "1991": {
+        "total": 282,
+        "espanolas": 0
+    },
+    "1992": {
+        "total": 342,
+        "espanolas": 0
+    },
+    "1993": {
+        "total": 443,
+        "espanolas": 0
+    },
+    "1994": {
+        "total": 663,
+        "espanolas": 3
+    },
+    "1995": {
+        "total": 638,
+        "espanolas": 1
+    },
+    "1996": {
+        "total": 580,
+        "espanolas": 1
+    },
+    "1997": {
+        "total": 785,
+        "espanolas": 5
+    },
+    "1998": {
+        "total": 730,
+        "espanolas": 2
+    },
+    "1999": {
+        "total": 676,
+        "espanolas": 1
+    },
+    "2000": {
+        "total": 1092,
+        "espanolas": 9
+    },
+    "2001": {
+        "total": 794,
+        "espanolas": 5
+    },
+    "2002": {
+        "total": 1118,
+        "espanolas": 1
+    },
+    "2003": {
+        "total": 928,
+        "espanolas": 3
+    },
+    "2004": {
+        "total": 1097,
+        "espanolas": 3
+    },
+    "2005": {
+        "total": 1150,
+        "espanolas": 3
+    },
+    "2006": {
+        "total": 1495,
+        "espanolas": 10
+    },
+    "2007": {
+        "total": 1751,
+        "espanolas": 11
+    },
+    "2008": {
+        "total": 2484,
+        "espanolas": 33
+    },
+    "2009": {
+        "total": 2624,
+        "espanolas": 29
+    },
+    "2010": {
+        "total": 3738,
+        "espanolas": 68
+    },
+    "2011": {
+        "total": 3617,
+        "espanolas": 56
+    },
+    "2012": {
+        "total": 4316,
+        "espanolas": 65
+    },
+    "2013": {
+        "total": 4172,
+        "espanolas": 90
+    },
+    "2014": {
+        "total": 4864,
+        "espanolas": 97
+    },
+    "2015": {
+        "total": 4439,
+        "espanolas": 60
+    },
+    "2016": {
+        "total": 4912,
+        "espanolas": 56
+    },
+    "2017": {
+        "total": 4717,
+        "espanolas": 67
+    },
+    "2018": {
+        "total": 5192,
+        "espanolas": 49
+    },
+    "2019": {
+        "total": 4343,
+        "espanolas": 48
+    },
+    "2020": {
+        "total": 4925,
+        "espanolas": 47
+    },
+    "2021": {
+        "total": 4502,
+        "espanolas": 47
+    },
+    "2022": {
+        "total": 4405,
+        "espanolas": 54
+    },
+    "2023": {
+        "total": 5410,
+        "espanolas": 62
+    },
+    "2024": {
+        "total": 5565,
+        "espanolas": 82
+    },
+    "2025": {
+        "total": 3948,
+        "espanolas": 46
+    }
+}

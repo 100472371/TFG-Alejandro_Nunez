@@ -1,0 +1,15 @@
+INFO:     Started server process [1637034]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1637034]
+INFO:     Started server process [1637821]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.117.129.37:59484 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59498 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59508 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK

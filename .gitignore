@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+.streamlit/secrets.toml
+downloads/
+data/
+.vscode/
+.DS_Store
+Thumbs.db

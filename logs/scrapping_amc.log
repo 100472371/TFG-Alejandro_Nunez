@@ -1,0 +1,206 @@
+2025-07-28 13:27:29,507 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 13:27:29,507 - ERROR - El driver no se encuentra en la ruta especificada: /home/alejandro/TFG-Automatizacion/ChromeDriver/chromedriver_win64_116/chromedriver-win64/chromedriver.exe
+2025-07-28 13:28:10,942 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 13:28:10,942 - ERROR - El driver no se encuentra en la ruta especificada: /home/alejandro/TFG-Automatizacion/ChromeDriver/chromedriver_win64_116/chromedriver-win64/chromedriver.exe
+2025-07-28 13:38:30,610 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 13:38:30,610 - ERROR - El driver no se encuentra en la ruta especificada: /home/alejandro/TFG-Automatizacion/Automatizacion/ChromeDriver/chromedriver-linux64/chromedriver
+2025-07-28 13:41:13,181 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 13:41:13,229 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 13:41:14,493 - INFO - Navegador iniciado correctamente
+2025-07-28 13:41:36,203 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 13:41:36,203 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 13:41:46,606 - ERROR - No se pudo realizar la búsqueda.
+2025-07-28 13:41:57,008 - WARNING - Timeout al establecer el filtro de año.
+2025-07-28 13:42:09,461 - WARNING - Timeout al establecer el filtro de año.
+2025-07-28 13:42:28,343 - INFO - Hay resultados.
+2025-07-28 13:42:38,867 - WARNING - No se pudo obtener el número total de publicaciones.
+2025-07-28 13:42:44,067 - WARNING - No se encontró el filtro del año 2025.
+2025-07-28 13:42:44,067 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 13:42:54,437 - ERROR - No se pudo realizar la búsqueda.
+2025-07-28 13:43:09,531 - WARNING - No se pudo ajustar el número de resultados por página.
+2025-07-28 13:43:19,970 - WARNING - Timeout al establecer el filtro de año.
+2025-07-28 13:43:32,835 - WARNING - Timeout al establecer el filtro de año.
+2025-07-28 13:43:51,868 - INFO - Hay resultados.
+2025-07-28 13:44:02,336 - WARNING - No se pudo obtener el número total de publicaciones.
+2025-07-28 13:44:07,591 - WARNING - No se encontró el filtro del año 2025.
+2025-07-28 13:44:07,592 - INFO - Estadísticas guardadas en 'estadisticas_resultados.txt'
+2025-07-28 13:44:07,592 - INFO - Estadísticas por año obtenidas correctamente.
+2025-07-28 13:44:07,593 - WARNING - No hay archivos .bib para combinar.
+2025-07-28 13:44:07,599 - INFO - Navegador cerrado correctamente.
+2025-07-28 14:53:57,905 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 14:53:57,959 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 14:53:58,966 - INFO - Navegador iniciado correctamente
+2025-07-28 14:54:22,081 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 14:54:22,081 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 14:54:32,455 - ERROR - No se pudo realizar la búsqueda.
+2025-07-28 14:54:42,832 - WARNING - Timeout al establecer el filtro de año.
+2025-07-28 14:54:55,248 - WARNING - Timeout al establecer el filtro de año.
+2025-07-28 14:55:14,075 - INFO - Hay resultados.
+2025-07-28 14:55:24,436 - WARNING - No se pudo obtener el número total de publicaciones.
+2025-07-28 14:55:29,583 - WARNING - No se encontró el filtro del año 2025.
+2025-07-28 14:55:29,583 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 14:55:39,868 - ERROR - No se pudo realizar la búsqueda.
+2025-07-28 14:55:55,338 - WARNING - No se pudo ajustar el número de resultados por página.
+2025-07-28 14:56:05,756 - WARNING - Timeout al establecer el filtro de año.
+2025-07-28 14:56:18,245 - WARNING - Timeout al establecer el filtro de año.
+2025-07-28 14:56:37,094 - INFO - Hay resultados.
+2025-07-28 14:56:47,152 - WARNING - No se pudo obtener el número total de publicaciones.
+2025-07-28 14:56:52,434 - WARNING - No se encontró el filtro del año 2025.
+2025-07-28 14:56:52,435 - INFO - Estadísticas guardadas en 'estadisticas_resultados.txt'
+2025-07-28 14:56:52,435 - INFO - Estadísticas por año obtenidas correctamente.
+2025-07-28 14:56:52,435 - WARNING - No hay archivos .bib para combinar.
+2025-07-28 14:56:52,637 - INFO - Navegador cerrado correctamente.
+2025-07-28 15:00:40,979 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 15:06:40,498 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 15:11:10,329 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 15:11:10,344 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 15:11:11,148 - INFO - Navegador iniciado correctamente
+2025-07-28 15:11:36,740 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 15:11:36,740 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 15:11:47,191 - ERROR - No se pudo realizar la búsqueda.
+2025-07-28 15:11:56,726 - INFO - Navegador cerrado correctamente.
+2025-07-28 15:12:08,215 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 15:12:30,363 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 15:12:30,480 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 15:12:31,464 - INFO - Navegador iniciado correctamente
+2025-07-28 15:12:51,048 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 15:12:51,048 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 15:13:01,439 - ERROR - No se pudo realizar la búsqueda.
+2025-07-28 15:13:11,845 - WARNING - Timeout al establecer el filtro de año.
+2025-07-28 15:13:24,265 - WARNING - Timeout al establecer el filtro de año.
+2025-07-28 15:13:27,182 - INFO - Navegador cerrado correctamente.
+2025-07-28 15:15:14,499 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 15:15:14,511 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 15:15:14,889 - INFO - Navegador iniciado correctamente
+2025-07-28 15:15:37,632 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 15:15:37,632 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 15:15:48,049 - ERROR - No se pudo realizar la búsqueda.
+2025-07-28 15:15:52,392 - INFO - Navegador cerrado correctamente.
+2025-07-28 15:22:26,945 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 15:22:26,984 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 15:23:23,985 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 15:23:24,005 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 15:23:25,074 - INFO - Navegador iniciado correctamente
+2025-07-28 15:23:49,127 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 15:23:49,128 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 15:23:51,515 - INFO - Navegador cerrado correctamente.
+2025-07-28 15:30:24,277 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 15:33:16,022 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 15:33:16,040 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 15:33:16,759 - INFO - Navegador iniciado correctamente
+2025-07-28 15:33:39,121 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 15:33:39,121 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 15:33:41,472 - INFO - Navegador cerrado correctamente.
+2025-07-28 15:36:28,500 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 15:36:28,516 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 15:36:28,897 - INFO - Navegador iniciado correctamente
+2025-07-28 15:36:49,842 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 15:36:49,842 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 15:36:52,504 - INFO - Navegador cerrado correctamente.
+2025-07-28 15:47:57,809 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 15:47:58,926 - INFO - patching driver executable /home/alejandro/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-07-28 15:47:59,671 - INFO - Navegador iniciado correctamente
+2025-07-28 15:48:18,057 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 15:48:18,057 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 15:48:26,399 - INFO - Navegador cerrado correctamente.
+2025-07-28 15:49:39,929 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 15:49:41,076 - INFO - patching driver executable /home/alejandro/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-07-28 15:49:41,474 - INFO - Navegador iniciado correctamente
+2025-07-28 15:50:06,841 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 15:50:06,841 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 15:50:08,463 - INFO - Navegador cerrado correctamente.
+2025-07-28 17:51:52,766 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 17:51:53,933 - INFO - patching driver executable /home/alejandro/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-07-28 17:54:17,102 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 17:54:26,910 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 17:54:28,067 - INFO - patching driver executable /home/alejandro/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-07-28 17:54:28,993 - INFO - Navegador iniciado correctamente
+2025-07-28 17:54:43,296 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 17:54:43,296 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 17:54:48,936 - INFO - Navegador cerrado correctamente.
+2025-07-28 17:56:24,855 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 17:56:26,222 - INFO - patching driver executable /home/alejandro/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-07-28 18:01:10,618 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 18:01:11,823 - INFO - patching driver executable /home/alejandro/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-07-28 18:01:12,278 - INFO - Navegador iniciado correctamente
+2025-07-28 18:01:27,388 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 18:01:27,388 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 18:01:37,873 - ERROR - No se pudo realizar la búsqueda.
+2025-07-28 18:01:39,877 - INFO - Navegador cerrado correctamente.
+2025-07-28 18:07:30,258 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 18:07:53,474 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 18:07:53,494 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 18:08:22,545 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 18:08:22,559 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 18:08:22,870 - INFO - Navegador iniciado correctamente
+2025-07-28 18:08:40,308 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 18:08:40,309 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 18:08:50,764 - ERROR - No se pudo realizar la búsqueda.
+2025-07-28 18:09:01,247 - WARNING - Timeout al establecer el filtro de año.
+2025-07-28 18:09:13,766 - WARNING - Timeout al establecer el filtro de año.
+2025-07-28 18:09:16,260 - INFO - Navegador cerrado correctamente.
+2025-07-28 18:09:21,592 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 18:09:21,612 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 18:09:22,037 - INFO - Navegador iniciado correctamente
+2025-07-28 18:09:37,131 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 18:09:37,132 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 18:09:39,931 - INFO - Navegador cerrado correctamente.
+2025-07-28 18:09:41,372 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 18:09:41,391 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 18:09:41,810 - INFO - Navegador iniciado correctamente
+2025-07-28 18:09:58,960 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 18:09:58,960 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 18:10:01,426 - INFO - Navegador cerrado correctamente.
+2025-07-28 18:16:04,792 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 18:16:04,803 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 18:16:05,250 - INFO - Navegador iniciado correctamente
+2025-07-28 18:16:21,220 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 18:16:21,220 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 18:16:25,636 - INFO - Navegador cerrado correctamente.
+2025-07-28 18:25:31,799 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 18:25:31,818 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 18:25:32,179 - INFO - Navegador iniciado correctamente
+2025-07-28 18:25:55,786 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 18:25:55,786 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 18:25:57,492 - INFO - Navegador cerrado correctamente.
+2025-07-28 18:52:41,259 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 18:52:41,278 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 18:52:41,664 - INFO - Navegador iniciado correctamente
+2025-07-28 18:53:06,956 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 18:53:06,957 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 18:53:09,708 - INFO - Navegador cerrado correctamente.
+2025-07-28 18:55:14,900 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 18:55:14,919 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 18:55:15,346 - INFO - Navegador iniciado correctamente
+2025-07-28 18:55:45,998 - INFO - No se detectó CAPTCHA en esta sesión
+2025-07-28 18:55:56,487 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 18:55:56,487 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 18:56:06,994 - ERROR - No se pudo realizar la búsqueda.
+2025-07-28 18:56:13,167 - INFO - Navegador cerrado correctamente.
+2025-07-28 18:57:27,430 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 18:57:27,445 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 18:57:27,798 - INFO - Navegador iniciado correctamente
+2025-07-28 18:57:39,906 - INFO - Buscando CAPTCHA de Cloudflare...
+2025-07-28 18:58:00,482 - WARNING - No se detectó CAPTCHA. Captura guardada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm/screenshot_captcha_20250728_185800.png
+2025-07-28 18:58:11,000 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 18:58:11,000 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 18:58:15,011 - INFO - Navegador cerrado correctamente.
+2025-07-28 19:04:13,858 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 19:04:13,873 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 19:04:14,267 - INFO - Navegador iniciado correctamente
+2025-07-28 19:04:28,899 - INFO - Simulando actividad humana para evitar CAPTCHA
+2025-07-28 19:04:34,610 - INFO - Movimiento de ratón simulado
+2025-07-28 19:04:46,724 - INFO - No se encontró el botón de cookies o ya estaba cerrado.
+2025-07-28 19:04:46,724 - INFO - Primera búsqueda, detectando caja inicial...
+2025-07-28 19:04:57,213 - ERROR - No se pudo realizar la búsqueda.
+2025-07-28 19:04:58,425 - INFO - Navegador cerrado correctamente.
+2025-07-28 19:27:02,042 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 19:27:02,055 - WARNING - could not detect version_main.therefore, we are assuming it is chrome 108 or higher
+2025-07-28 19:27:02,462 - INFO - Navegador iniciado correctamente
+2025-07-28 19:52:04,901 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 19:52:55,580 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 19:53:41,270 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 19:54:24,491 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 19:55:12,544 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 19:56:12,174 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
+2025-07-28 19:57:50,559 - INFO - Carpeta de descargas configurada en: /home/alejandro/TFG-Automatizacion/Automatizacion/descargas_acm
