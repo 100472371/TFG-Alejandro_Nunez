@@ -114,6 +114,7 @@ def resetear_kpis():
     st.session_state.pop("df_evolucion_autor", None)
     st.session_state.pop("csv_data", None)
     st.session_state.pop("csv_nombre", None)
+    st.session_state["ocultar_kpis"] = False
 
 def realizar_busqueda():
     st.session_state["cargando"] = True
@@ -250,11 +251,12 @@ if st.session_state.get("carga_completada"):
     st.markdown("<div class='subtitle'>Search Filters</div>", unsafe_allow_html=True)
 
     # --- Trigger del modal (no llama nada aún; solo marca un flag y rerun) ---
-    top_left, top_right = st.columns([10, 1])
+    top_left, top_right = st.columns([3, 1])  # antes [10, 1]
     with top_right:
-        if st.button("Update data", key="btn_open_update"):
+        if st.button("Update data", key="btn_open_update", use_container_width=True):
             st.session_state["open_update_modal"] = True
             st.rerun()
+
 
 
     
@@ -266,6 +268,11 @@ if st.session_state.get("carga_completada"):
 
     if "kpi_pub_total" not in st.session_state:
         resetear_kpis() # inicializo KPIs a "-"
+
+   
+    if "ocultar_kpis" not in st.session_state:
+        st.session_state["ocultar_kpis"] = False
+
 
     def mostrar_kpis(pub_total, autores_unicos, conf_total):
         col1, col2, col3 = st.columns(3)
@@ -640,41 +647,74 @@ if st.session_state.get("carga_completada"):
                     st.session_state["df_evolucion_autor"] = df
                     autor_actual = st.session_state.get("autor_input", "").strip()
 
-                    # Por defecto si no hay publicaciones
-                    st.session_state["kpi_conf_total"] = "-"
-                    st.session_state["kpi_autores_unicos"] = 1
-                    st.session_state["kpi_pub_total"] = df["total"].sum() if not df.empty else 0
+                    # Por defecto: no mostramos KPIs si no hay resultados
+                    if df.empty:
+                        # 1) Consulto si el autor existe en la BD (independiente del rango de años)
+                        exists = None
+                        try:
+                            check = requests.get(f"{API_BASE}/autores/existe", params={"autor": autor_actual}, timeout=15)
+                            check.raise_for_status()
+                            exists = check.json().get("exists", False)
+                        except Exception:
+                            exists = None  # si falla la comprobación, mostramos un mensaje genérico
 
-                    # Cargar CSV y extraer conferencias antes de mostrar KPI
-                    try:
-                        params_export = {
-                            "autor": autor_actual,
-                            "year_start": year_start,
-                            "year_end": year_end
-                        }
-                        csv_export = requests.post(f"{API_BASE}/exportar_csv/evolucion_autor", params=params_export).content
-                        st.session_state["csv_data"] = csv_export
-                        autor_formateado = autor_actual.replace(" ", "_").lower()
-                        st.session_state["csv_nombre"] = f"evolucion_de_{autor_formateado}_{year_start}_{year_end}.csv"
-
-                        df_csv_autor = pd.read_csv(io.BytesIO(csv_export))
-
-                        campo_conf = None
-                        for posible in ["series", "booktitle"]:
-                            if posible in df_csv_autor.columns:
-                                campo_conf = posible
-                                break
-
-                        if campo_conf:
-                            conferencias_unicas = sorted(set(df_csv_autor[campo_conf].dropna().unique()))
-                            st.session_state["kpi_conf_total"] = ", ".join(conferencias_unicas) if conferencias_unicas else "(no conferences)"
-                        else:
-                            st.session_state["kpi_conf_total"] = "(field not available)"
-
-                    except Exception as e:
+                        # 2) Ocultar KPIs y dejar sin CSV
+                        st.session_state["ocultar_kpis"] = True
+                        st.session_state["kpi_pub_total"] = "-"
+                        st.session_state["kpi_autores_unicos"] = "-"
                         st.session_state["kpi_conf_total"] = "-"
-                        st.warning("Failed to extract conferences from CSV.")
-                        st.exception(e)
+                        st.session_state.pop("csv_data", None)
+                        st.session_state.pop("csv_nombre", None)
+
+                        # 3) Mensaje acorde
+                        if exists is False:
+                            st.error("Author not found in the database. Please try another full name.")
+                        elif exists is True:
+                            st.info("This author exists, but has no publications within the selected years. Try expanding the year range.")
+                        else:
+                            st.warning("No results found. Try a different author or adjust the year range.")
+
+                    else:
+                        # Hay resultados: mostramos KPIs y generamos CSV como hasta ahora
+                        st.session_state["ocultar_kpis"] = False
+                        st.session_state["kpi_conf_total"] = "-"
+                        st.session_state["kpi_autores_unicos"] = 1
+                        st.session_state["kpi_pub_total"] = int(df["total"].sum())
+
+                        try:
+                            params_export = {
+                                "autor": autor_actual,
+                                "year_start": year_start,
+                                "year_end": year_end
+                            }
+                            csv_export = requests.post(
+                                f"{API_BASE}/exportar_csv/evolucion_autor",
+                                params=params_export
+                            ).content
+
+                            st.session_state["csv_data"] = csv_export
+                            autor_formateado = autor_actual.replace(" ", "_").lower()
+                            st.session_state["csv_nombre"] = f"evolucion_de_{autor_formateado}_{year_start}_{year_end}.csv"
+
+                            df_csv_autor = pd.read_csv(io.BytesIO(csv_export))
+
+                            campo_conf = None
+                            for posible in ["series", "booktitle"]:
+                                if posible in df_csv_autor.columns:
+                                    campo_conf = posible
+                                    break
+
+                            if campo_conf:
+                                conferencias_unicas = sorted(set(df_csv_autor[campo_conf].dropna().unique()))
+                                st.session_state["kpi_conf_total"] = ", ".join(conferencias_unicas) if conferencias_unicas else "(no conferences)"
+                            else:
+                                st.session_state["kpi_conf_total"] = "(field not available)"
+
+                        except Exception as e:
+                            st.session_state["kpi_conf_total"] = "-"
+                            st.warning("Failed to extract conferences from CSV.")
+                            st.exception(e)
+
 
                 elif accion == "Frequent Co-author Pairs":
                     df_pairs = pd.DataFrame(respuesta["pairs"])  # columnas: autor1, autor2, total
@@ -809,12 +849,12 @@ if st.session_state.get("carga_completada"):
 
 
 
-
-    mostrar_kpis(
-        st.session_state["kpi_pub_total"],
-        st.session_state["kpi_autores_unicos"],
-        st.session_state["kpi_conf_total"]
-    )
+    if not st.session_state.get("ocultar_kpis", False):
+        mostrar_kpis(
+            st.session_state["kpi_pub_total"],
+            st.session_state["kpi_autores_unicos"],
+            st.session_state["kpi_conf_total"]
+        )
 
     # === KEYWORDS ================================================================
     df_keywords = st.session_state.get("df_keywords")

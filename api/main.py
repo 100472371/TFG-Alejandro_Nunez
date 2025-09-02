@@ -15,14 +15,10 @@ from db_manager import (
     obtener_ids_papers_por_autor,
     get_connection,
     obtener_paper_completo,
-    ranking_por_editorial,
     ranking_por_conferencia,
     evolucion_autor,
     palabras_clave_mas_usadas,
     publicaciones_espanolas_por_anio,
-    produccion_total_por_editorial,
-    produccion_total_por_conferencia,
-    autores_por_editorial,
     obtener_ids_papers_por_editorial,
     obtener_ids_papers_por_conferencia,
     get_paper_ids_from_authors_conferencia,
@@ -181,6 +177,12 @@ def exportar_csv_publicaciones_espanolas(year_start: Optional[int] = None, year_
 @app.get("/estadisticas/evolucion_autor")
 def endpoint_evolucion_autor(autor: str, year_start: int = None, year_end: int = None):
     return evolucion_autor(autor, year_start, year_end)
+
+@app.get("/autores/existe")
+def endpoint_autor_existe(autor: str):
+    ids = obtener_ids_papers_por_autor(autor)
+    return {"exists": len(ids) > 0, "total_papers": len(ids)}
+
 
 @app.post("/exportar_csv/evolucion_autor", response_class=StreamingResponse)
 def exportar_csv_evolucion_autor(autor: str, year_start: Optional[int] = None, year_end: Optional[int] = None):

@@ -13,3 +13,1526 @@ INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 INFO:     10.117.129.37:59484 - "GET /limites/anios HTTP/1.1" 200 OK
 INFO:     10.117.129.37:59498 - "GET /conferencias_unicas HTTP/1.1" 200 OK
 INFO:     10.117.129.37:59508 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1637821]
+Traceback (most recent call last):
+  File "/home/alejandro/env_alejandro/bin/uvicorn", line 8, in <module>
+    sys.exit(main())
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 1442, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 1363, in main
+    rv = self.invoke(ctx)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 1226, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 794, in invoke
+    return callback(*args, **kwargs)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/main.py", line 413, in main
+    run(
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/main.py", line 580, in run
+    server.run()
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/config.py", line 436, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/alejandro/TFG-Automatizacion/api/main.py", line 13, in <module>
+    from db_manager import (
+ImportError: cannot import name 'ranking_por_editorial' from 'db_manager' (/home/alejandro/TFG-Automatizacion/api/db_manager.py)
+Traceback (most recent call last):
+  File "/home/alejandro/env_alejandro/bin/uvicorn", line 8, in <module>
+    sys.exit(main())
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 1442, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 1363, in main
+    rv = self.invoke(ctx)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 1226, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 794, in invoke
+    return callback(*args, **kwargs)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/main.py", line 413, in main
+    run(
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/main.py", line 580, in run
+    server.run()
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/config.py", line 436, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/alejandro/TFG-Automatizacion/api/main.py", line 13, in <module>
+    from db_manager import (
+ImportError: cannot import name 'produccion_total_por_editorial' from 'db_manager' (/home/alejandro/TFG-Automatizacion/api/db_manager.py)
+Traceback (most recent call last):
+  File "/home/alejandro/env_alejandro/bin/uvicorn", line 8, in <module>
+    sys.exit(main())
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 1442, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 1363, in main
+    rv = self.invoke(ctx)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 1226, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 794, in invoke
+    return callback(*args, **kwargs)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/main.py", line 413, in main
+    run(
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/main.py", line 580, in run
+    server.run()
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/config.py", line 436, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/alejandro/TFG-Automatizacion/api/main.py", line 13, in <module>
+    from db_manager import (
+ImportError: cannot import name 'produccion_total_por_conferencia' from 'db_manager' (/home/alejandro/TFG-Automatizacion/api/db_manager.py)
+Traceback (most recent call last):
+  File "/home/alejandro/env_alejandro/bin/uvicorn", line 8, in <module>
+    sys.exit(main())
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 1442, in __call__
+    return self.main(*args, **kwargs)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 1363, in main
+    rv = self.invoke(ctx)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 1226, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/click/core.py", line 794, in invoke
+    return callback(*args, **kwargs)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/main.py", line 413, in main
+    run(
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/main.py", line 580, in run
+    server.run()
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/config.py", line 436, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/alejandro/TFG-Automatizacion/api/main.py", line 13, in <module>
+    from db_manager import (
+ImportError: cannot import name 'produccion_total_por_conferencia' from 'db_manager' (/home/alejandro/TFG-Automatizacion/api/db_manager.py)
+INFO:     Started server process [3678631]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.117.129.37:42548 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42558 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42562 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60144 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60152 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60162 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38710 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38718 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38734 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37826 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37836 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37844 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37850 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37852 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37860 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51428 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51432 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51440 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40910 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40916 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40926 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40940 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40956 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40970 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40976 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40980 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40988 - "GET /ranking/autores?year_start=2010&year_end=2022 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41004 - "POST /exportar_csv/ranking_autores?year_start=2010&year_end=2022 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:55978 - "POST /exportar_csv/ranking_autores?year_start=2010&year_end=2022 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:55988 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42046 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42058 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42072 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42088 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42094 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42098 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34120 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34130 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34144 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43960 - "GET /estadisticas/publicaciones_espanolas?year_start=2010&year_end=2022 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43964 - "POST /exportar_csv/publicaciones_espanolas?year_start=2010&year_end=2022 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43968 - "POST /exportar_csv/publicaciones_espanolas?year_start=2010&year_end=2022 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37190 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37204 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37220 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47474 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47482 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47488 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47492 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47506 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56744 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57068 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39632 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51676 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51690 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52810 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52818 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52826 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52840 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43712 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43728 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43732 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.115.48.10:52279 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.115.48.10:52279 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.115.48.72:39801 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.115.48.72:39801 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.115.48.72:1829 - "GET /estadisticas/evolucion_autor?autor=Lourdes%20Moreno HTTP/1.1" 200 OK
+INFO:     10.115.48.72:35642 - "GET /estadisticas/evolucion_autor?autor=Lourdes%20Moreno HTTP/1.1" 200 OK
+INFO:     10.115.48.72:60278 - "GET /estadisticas/evolucion_autor?autor=Alejandro%20N%C3%BA%C3%B1ez HTTP/1.1" 200 OK
+INFO:     10.115.48.72:23097 - "GET /estadisticas/evolucion_autor?autor=Lourdes%20Moreno HTTP/1.1" 200 OK
+INFO:     10.115.48.72:49491 - "GET /estadisticas/evolucion_autor?autor=Lourdes%20Moreno&year_start=1922 HTTP/1.1" 200 OK
+INFO:     10.115.48.72:30537 - "GET /estadisticas/evolucion_autor?autor=Lourdes%20Moreno&year_start=1922&year_end=1923 HTTP/1.1" 200 OK
+INFO:     10.115.48.72:48562 - "GET /estadisticas/evolucion_autor?autor=Lourdes%20Moreno&year_start=1922 HTTP/1.1" 200 OK
+INFO:     10.115.48.72:54892 - "GET /estadisticas/evolucion_autor?autor=Alejandro%20Nu%C3%B1ez&year_start=1922 HTTP/1.1" 200 OK
+INFO:     10.115.48.72:61406 - "POST /exportar_csv/evolucion_autor?autor=Alejandro%20N%C3%BA%C3%B1ez HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:32900 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:32904 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:32918 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52770 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52778 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52794 - "GET /ranking/autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52798 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52808 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35404 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56004 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56006 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56016 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59304 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59318 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59322 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57410 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57414 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57416 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43830 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43838 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60186 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60190 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60206 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60208 - "GET /estadisticas/evolucion_autor?year_start=1994&year_end=2025&autor=Alejandro+N%C3%BA%C3%B1ez HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60224 - "POST /exportar_csv/evolucion_autor?autor=Alejandro+N%C3%BA%C3%B1ez&year_start=1994&year_end=2025 HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:60232 - "POST /exportar_csv/evolucion_autor?year_start=1994&year_end=2025&autor=Alejandro+N%C3%BA%C3%B1ez HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:60236 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43008 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43018 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39858 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39870 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39878 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39886 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48398 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48412 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46460 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46462 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46476 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60476 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60484 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60498 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60502 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60508 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60510 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60524 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60540 - "GET /estadisticas/evolucion_autor?year_start=1994&year_end=1995&autor=Lourdes+Moreno HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60542 - "POST /exportar_csv/evolucion_autor?autor=Lourdes+Moreno&year_start=1994&year_end=1995 HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:60552 - "POST /exportar_csv/evolucion_autor?year_start=1994&year_end=1995&autor=Lourdes+Moreno HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:60562 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44378 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44386 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44394 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44410 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44416 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44420 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44426 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44432 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44438 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44440 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44448 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44464 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44472 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44476 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47942 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47958 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47962 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47970 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=1995 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47978 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=1995 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47992 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=1995 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48006 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=1995 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48012 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48028 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48036 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48048 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48064 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3678631]
+INFO:     Started server process [1712497]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.117.129.37:34750 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34764 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34770 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34778 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34792 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34796 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34798 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37934 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37944 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37948 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37964 - "GET /estadisticas/evolucion_autor?year_start=1994&year_end=2025&autor=Alejandro+Nu%C3%B1ez HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37972 - "GET /autores/existe?autor=Alejandro+Nu%C3%B1ez HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37980 - "POST /exportar_csv/evolucion_autor?year_start=1994&year_end=2025&autor=Alejandro+Nu%C3%B1ez HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:37994 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40634 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40644 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40660 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40670 - "GET /estadisticas/evolucion_autor?year_start=1994&year_end=2025&autor=Lourdes+Moreno HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40674 - "POST /exportar_csv/evolucion_autor?autor=Lourdes+Moreno&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40686 - "POST /exportar_csv/evolucion_autor?year_start=1994&year_end=2025&autor=Lourdes+Moreno HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40696 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40706 - "POST /exportar_csv/evolucion_autor?autor=Lourdes+Moreno&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34866 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34876 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34880 - "POST /exportar_csv/evolucion_autor?autor=Lourdes+Moreno&year_start=1994&year_end=1995 HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:34884 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34900 - "GET /estadisticas/evolucion_autor?year_start=1994&year_end=1995&autor=Lourdes+Moreno HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34916 - "GET /autores/existe?autor=Lourdes+Moreno HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34932 - "POST /exportar_csv/evolucion_autor?year_start=1994&year_end=1995&autor=Lourdes+Moreno HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:34938 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53316 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53330 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53336 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53346 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53434 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53446 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53462 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53470 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53482 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53488 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53496 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53512 - "GET /ranking/autores?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53528 - "POST /exportar_csv/ranking_autores?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53530 - "POST /exportar_csv/ranking_autores?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53536 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54950 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53744 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53756 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44246 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44248 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44264 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52052 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52056 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52062 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52070 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52074 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52086 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51322 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51326 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51330 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44272 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44282 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44286 - "GET /ranking/autores?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44298 - "POST /exportar_csv/ranking_autores?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44312 - "POST /exportar_csv/ranking_autores?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44318 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46550 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46554 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46556 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44640 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44646 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44660 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50748 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50750 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50760 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57668 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57682 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57690 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57704 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57716 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57720 - "GET /ranking/autores?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57722 - "POST /exportar_csv/ranking_autores?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57738 - "POST /exportar_csv/ranking_autores?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57742 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47774 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47778 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47788 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60614 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60618 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60634 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54920 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54928 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54932 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54936 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54950 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54954 - "GET /ranking/autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54968 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54976 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54988 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50192 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50204 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50218 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50230 - "GET /estadisticas/publicaciones_espanolas?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50236 - "POST /exportar_csv/publicaciones_espanolas?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50248 - "POST /exportar_csv/publicaciones_espanolas?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50264 - "POST /exportar_csv/publicaciones_espanolas?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50272 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38512 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38526 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38540 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38544 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38550 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38564 - "GET /estadisticas/publicaciones_espanolas?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38572 - "POST /exportar_csv/publicaciones_espanolas?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38584 - "POST /exportar_csv/publicaciones_espanolas?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43430 - "POST /exportar_csv/publicaciones_espanolas?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43438 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54300 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54308 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54316 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54320 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54326 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54328 - "GET /ranking/autores?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54344 - "POST /exportar_csv/ranking_autores?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54360 - "POST /exportar_csv/ranking_autores?year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54362 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54666 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54674 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:32988 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33002 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33018 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33030 - "GET /estadisticas/evolucion_autor?year_start=2018&year_end=2024&autor=Laia+Turmo+Vidal HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33034 - "POST /exportar_csv/evolucion_autor?autor=Laia+Turmo+Vidal&year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33038 - "POST /exportar_csv/evolucion_autor?year_start=2018&year_end=2024&autor=Laia+Turmo+Vidal HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33054 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33058 - "POST /exportar_csv/evolucion_autor?autor=Laia+Turmo+Vidal&year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48724 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48732 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48734 - "POST /exportar_csv/evolucion_autor?autor=Laia+Turmo+Vidal&year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50762 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50766 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50772 - "POST /exportar_csv/evolucion_autor?autor=Laia+Turmo+Vidal&year_start=2018&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35716 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35728 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35736 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54004 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54014 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54024 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44436 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44446 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44448 - "GET /ranking/autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44474 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44482 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44492 - "GET /ranking/autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44464 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44496 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44500 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56874 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52244 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52250 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52256 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52268 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52276 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52292 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52306 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52312 - "POST /exportar_csv/palabras_clave?year_start=1994&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57902 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37756 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37770 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45086 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45088 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45096 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40774 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56620 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38772 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45040 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45046 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45050 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45054 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45068 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45080 - "GET /estadisticas/evolucion_autor?year_start=1994&year_end=2025&autor=Ignacio+Aedo HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45084 - "POST /exportar_csv/evolucion_autor?autor=Ignacio+Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45100 - "POST /exportar_csv/evolucion_autor?year_start=1994&year_end=2025&autor=Ignacio+Aedo HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45114 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45118 - "POST /exportar_csv/evolucion_autor?autor=Ignacio+Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47120 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47130 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47144 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47152 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top=20&min_papers=2 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47166 - "POST /exportar_csv/coautorias?year_start=1994&year_end=2025&top=20&min_papers=2 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46412 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     Started server process [3847874]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.117.129.37:50006 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50010 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50016 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35722 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35730 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35742 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35744 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35756 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35762 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35778 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35786 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35802 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35818 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35826 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35834 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43294 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43306 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43322 - "GET /ranking/autores?year_start=1998&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43338 - "POST /exportar_csv/ranking_autores?year_start=1998&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43352 - "POST /exportar_csv/ranking_autores?year_start=1998&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43358 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57664 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57674 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57682 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57684 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57690 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57696 - "GET /ranking/conferencia?year_start=1998&year_end=2025&conferencia=ABIS HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57702 - "POST /exportar_csv/ranking_conferencia?year_start=1998&year_end=2025&conferencia=ABIS HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57716 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57728 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57738 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57744 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.115.48.72:37591 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.115.48.72:37591 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40268 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40282 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40290 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40304 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40310 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40318 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40324 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40340 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40346 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40358 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40374 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40384 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40400 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40412 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40416 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40426 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40434 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40438 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40442 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60672 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60682 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60694 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60710 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60726 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60736 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60746 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60756 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60772 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60780 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60790 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60800 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60806 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60820 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60822 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60824 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60834 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60836 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60844 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60856 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60872 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.115.48.72:36868 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45028 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45042 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47750 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47764 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47766 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47780 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47784 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47790 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47800 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47814 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47820 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47822 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47824 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47828 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47830 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47840 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47846 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47860 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47862 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47866 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47880 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47890 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47892 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47894 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47910 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47922 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47926 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47934 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47950 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47960 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47962 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47974 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47976 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47984 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47988 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52522 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52536 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52540 - "GET /ranking/autores?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52546 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52548 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52562 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52568 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52570 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52572 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52576 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52580 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52586 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52598 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52610 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52616 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52632 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52640 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52648 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52654 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52664 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52668 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52672 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52684 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52700 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52710 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52714 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52728 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52734 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52742 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52750 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52752 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52758 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52760 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52762 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52764 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52774 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52784 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52798 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52802 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52804 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52814 - "GET /ranking/conferencia?conferencia=CHI&year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52826 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52836 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52846 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52848 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52858 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52866 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52876 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52888 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52890 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52902 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52912 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52922 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52924 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52934 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52940 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52946 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52952 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52964 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52966 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52978 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52980 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52986 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53002 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53018 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53020 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53026 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53034 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53044 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53058 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53072 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53080 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53084 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53098 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53102 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53114 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53126 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53142 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53144 - "GET /estadisticas/palabras_clave?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53150 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53154 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53158 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53168 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53184 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53198 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53212 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53216 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53228 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53242 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53244 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53256 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53258 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53274 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53276 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53280 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53296 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53308 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53310 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53322 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53328 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53332 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53336 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53342 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53350 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53360 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53368 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53378 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53380 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53392 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53394 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53404 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53414 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53418 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53432 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53436 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53450 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53456 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53464 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53470 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53484 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53490 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53506 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53508 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53514 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53522 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53528 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53534 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53542 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53544 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53548 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53552 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53564 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53566 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53568 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53574 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53586 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53588 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53600 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53602 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53604 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53616 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53632 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53644 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53650 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53664 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53672 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53676 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53692 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53702 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53714 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53722 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53734 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53740 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53748 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53760 - "GET /estadisticas/evolucion_autor?autor=Ignacio%20Aedo&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53768 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53780 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53796 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53808 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53818 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53820 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53832 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53844 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53850 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53858 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53864 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47298 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47310 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47312 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47326 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47336 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47340 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47346 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47356 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47368 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47374 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47382 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47394 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47406 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47408 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47414 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47426 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47434 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47448 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47458 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47460 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47472 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47482 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47494 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47508 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47512 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47518 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47522 - "GET /estadisticas/coautorias?year_start=1994&year_end=2025&top_n=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42736 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42748 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42752 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35870 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35878 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35894 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35902 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35912 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35918 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35932 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35948 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35960 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35966 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35968 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35974 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35980 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35982 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35990 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36006 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36020 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36036 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36048 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36060 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36062 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36078 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36084 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36098 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36112 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36124 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36132 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36138 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36150 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36152 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36166 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36170 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36182 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36192 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36198 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36200 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36212 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36224 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36236 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36250 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36254 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36268 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36276 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36280 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36288 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36298 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36306 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36322 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36324 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36336 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36346 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36348 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36352 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36366 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36374 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36380 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36394 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36396 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36404 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36418 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36428 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36434 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36440 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36444 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36450 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36456 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50670 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50680 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50688 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50698 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50712 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50718 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50726 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50738 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50744 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50760 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50776 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50788 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34208 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34218 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34224 - "GET /ranking/autores?year_start=2019&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34236 - "POST /exportar_csv/ranking_autores?year_start=2019&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44912 - "POST /exportar_csv/ranking_autores?year_start=2019&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44924 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42392 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42398 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42408 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56818 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56830 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56842 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53896 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53902 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53908 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52584 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52598 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52602 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52616 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52630 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52644 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52650 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52654 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52656 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52670 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52676 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52684 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52694 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52704 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52714 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52726 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52732 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52734 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52746 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52760 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52770 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52778 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52792 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52796 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52804 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52820 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52834 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47724 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47730 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47742 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47752 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47762 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47764 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47770 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47786 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47790 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47792 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47804 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47810 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47826 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47832 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47836 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47850 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47864 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47870 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47876 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47888 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47890 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47900 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47904 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47916 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42696 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42708 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42720 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42724 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42726 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42734 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42748 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42750 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42756 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42762 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42778 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42792 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42798 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42814 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42828 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42834 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42842 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42846 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42860 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42876 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42888 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42902 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42912 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42920 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42936 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42946 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42950 - "GET /ranking/autores?year_start=2019&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42956 - "POST /exportar_csv/ranking_autores?year_start=2019&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37720 - "POST /exportar_csv/ranking_autores?year_start=2019&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37736 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48548 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48560 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48562 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48576 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48590 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57950 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57964 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48168 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48170 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48180 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48196 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58948 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58950 - "GET /estadisticas/evolucion_autor?year_start=2019&year_end=2024&autor=Lourdes+Moreno HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58958 - "GET /autores/existe?autor=Lourdes+Moreno HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58960 - "POST /exportar_csv/evolucion_autor?year_start=2019&year_end=2024&autor=Lourdes+Moreno HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:58968 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51288 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51292 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51298 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51304 - "GET /estadisticas/evolucion_autor?year_start=2019&year_end=2024&autor=Ignacio+Aedo HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51312 - "POST /exportar_csv/evolucion_autor?autor=Ignacio+Aedo&year_start=2019&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51324 - "POST /exportar_csv/evolucion_autor?year_start=2019&year_end=2024&autor=Ignacio+Aedo HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51334 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51350 - "POST /exportar_csv/evolucion_autor?autor=Ignacio+Aedo&year_start=2019&year_end=2024 HTTP/1.1" 200 OK
+INFO:     163.117.64.31:0 - "GET /?utm_source=chatgpt.com HTTP/1.1" 200 OK
+INFO:     163.117.64.31:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     163.117.64.31:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     205.169.39.7:0 - "GET / HTTP/1.1" 200 OK
+INFO:     163.117.64.31:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     31.4.178.132:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     31.4.178.132:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     2a02:9130:1b4:848f:91a5:f201:50d0:4994:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     34.122.147.229:0 - "GET / HTTP/1.1" 200 OK
+INFO:     2a02:9130:1b4:848f:91a5:f201:50d0:4994:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38698 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38700 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38706 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51306 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51314 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51320 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40918 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40922 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40938 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54292 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54300 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54304 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54306 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54312 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54318 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54326 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54332 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54342 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46202 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46214 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46220 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52236 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52250 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52262 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52278 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52288 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52290 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52306 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52308 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52310 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52326 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52340 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52356 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44030 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44036 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44052 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35510 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35524 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35532 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35548 - "GET /estadisticas/palabras_clave?year_start=1997&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35552 - "POST /exportar_csv/palabras_clave?year_start=1997&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35560 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48226 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48230 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48234 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48246 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33242 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33250 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33266 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33274 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33290 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33298 - "GET /ranking/autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33300 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54968 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54970 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51330 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51342 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51356 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54324 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54326 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54330 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40546 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40552 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40568 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40584 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40600 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40616 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42322 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42330 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42342 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54556 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54562 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54570 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:49216 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:49230 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:49234 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43462 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43474 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43482 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58284 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58286 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58290 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58304 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58316 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58322 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58326 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58328 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58330 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52186 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52190 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52192 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33502 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33510 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33514 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33524 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33528 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33530 - "GET /ranking/conferencia?year_start=2025&year_end=2025&conferencia=FDG HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33536 - "POST /exportar_csv/ranking_conferencia?year_start=2025&year_end=2025&conferencia=FDG HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:33540 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37232 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37238 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37250 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60840 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60848 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60852 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60868 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60880 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60890 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52878 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52892 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52900 - "GET /ranking/conferencia?year_start=2025&year_end=2025&conferencia=AH HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52916 - "POST /exportar_csv/ranking_conferencia?year_start=2025&year_end=2025&conferencia=AH HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:52922 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36802 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36814 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36826 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36834 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36838 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36844 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33890 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33904 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33920 - "GET /ranking/conferencia?year_start=1994&year_end=2025&conferencia=AGENTS HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33932 - "POST /exportar_csv/ranking_conferencia?year_start=1994&year_end=2025&conferencia=AGENTS HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33946 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42384 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42396 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42410 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37802 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37812 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37828 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53018 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53028 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53034 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53046 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53060 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48848 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42328 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60802 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59806 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59818 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50504 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50520 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50530 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50544 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36960 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36964 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57914 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57918 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54752 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54764 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54820 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54834 - "GET /estadisticas/evolucion_autor?year_start=1994&year_end=2025&autor=Mar%C3%ADa+Isabel HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54836 - "GET /autores/existe?autor=Mar%C3%ADa+Isabel HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54838 - "POST /exportar_csv/evolucion_autor?year_start=1994&year_end=2025&autor=Mar%C3%ADa+Isabel HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:54854 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48140 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48156 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48168 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48180 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54812 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54822 - "GET /estadisticas/evolucion_autor?year_start=1994&year_end=2025&autor=Lourdes+Moreno HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54834 - "POST /exportar_csv/evolucion_autor?autor=Lourdes+Moreno&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54836 - "POST /exportar_csv/evolucion_autor?year_start=1994&year_end=2025&autor=Lourdes+Moreno HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54840 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54846 - "POST /exportar_csv/evolucion_autor?autor=Lourdes+Moreno&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57082 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57086 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57094 - "POST /exportar_csv/evolucion_autor?autor=Lourdes+Moreno&year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43624 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43636 - "GET /estadisticas/evolucion_autor?year_start=2016&year_end=2025&autor=Lourdes+Moreno HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43640 - "GET /autores/existe?autor=Lourdes+Moreno HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43644 - "POST /exportar_csv/evolucion_autor?year_start=2016&year_end=2025&autor=Lourdes+Moreno HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:43660 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:49570 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:49572 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:49576 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40054 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40060 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40072 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40086 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40094 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40098 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57310 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57316 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57330 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57336 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57348 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57362 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57740 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57748 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57752 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57762 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57776 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57780 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34652 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34668 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34678 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54318 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54326 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54340 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54344 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54348 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54356 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58476 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58490 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58498 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58502 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58510 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58534 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58542 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58550 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58518 - "GET /ranking/autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58568 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58570 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58576 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58584 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58594 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58606 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58612 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58622 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58626 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58638 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58646 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58652 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58660 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58558 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58676 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:49024 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42308 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42322 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42334 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42340 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42344 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:55062 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60044 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35550 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38118 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38130 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38136 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38144 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50344 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50354 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39302 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39312 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39322 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39334 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35346 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35352 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35368 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35380 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35392 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35404 - "GET /ranking/autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35420 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35432 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36496 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53614 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53628 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53640 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44486 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44494 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44500 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44506 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44512 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44528 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44534 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44536 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44546 - "GET /ranking/conferencia?year_start=1994&year_end=2025&conferencia=AGENTS HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44552 - "POST /exportar_csv/ranking_conferencia?year_start=1994&year_end=2025&conferencia=AGENTS HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44562 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46984 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46986 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46990 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41566 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41574 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41586 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53360 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53374 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:53382 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41036 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41038 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41048 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41052 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41058 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41064 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41080 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41096 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41108 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41110 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41112 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41128 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41136 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41152 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41158 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41170 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41182 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41190 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41256 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41264 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41270 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40456 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40460 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40462 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40466 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40476 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40480 - "GET /ranking/conferencia?year_start=2000&year_end=2025&conferencia=ACE HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40486 - "POST /exportar_csv/ranking_conferencia?year_start=2000&year_end=2025&conferencia=ACE HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40488 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40030 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40046 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40048 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59744 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59756 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59758 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59770 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59782 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59792 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57794 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57806 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57816 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43298 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43306 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43314 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43324 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43336 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43062 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43074 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51558 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51568 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51574 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51588 - "GET /estadisticas/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51598 - "POST /exportar_csv/publicaciones_espanolas?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57086 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57096 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57104 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57120 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57126 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57136 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60236 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60250 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60260 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60268 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60282 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41064 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41080 - "GET /estadisticas/palabras_clave?year_start=2000&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41090 - "POST /exportar_csv/palabras_clave?year_start=2000&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41096 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57508 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57520 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57526 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52658 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52674 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52690 - "GET /ranking/autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56732 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56734 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56748 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59848 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59854 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59858 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50202 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50206 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50212 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45338 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45348 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45354 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35564 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35568 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35582 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39882 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39894 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39910 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39914 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39924 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39932 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39946 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39958 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39972 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39988 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39990 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39994 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39998 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40004 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40006 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40010 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40022 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40026 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40038 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40054 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40068 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40078 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40092 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40108 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40110 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40112 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40122 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40134 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40148 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40150 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40164 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40168 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40176 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51002 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51004 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51018 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51032 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51038 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51044 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39024 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39026 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39036 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59644 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59650 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59664 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59672 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59674 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59690 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59706 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59708 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59718 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59730 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59740 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59752 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59756 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59760 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59768 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59784 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59796 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59802 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59804 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59806 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59818 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59828 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59832 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59848 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59862 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59866 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59880 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59890 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59902 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59914 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33550 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33556 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33568 - "GET /ranking/autores?year_start=2003&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33570 - "POST /exportar_csv/ranking_autores?year_start=2003&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33586 - "POST /exportar_csv/ranking_autores?year_start=2003&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47590 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36456 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36468 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36470 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39662 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39674 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39680 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39696 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39698 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42460 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42468 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42474 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:42484 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35206 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35214 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35218 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35224 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35238 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35248 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35258 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35272 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35286 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35288 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38014 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38024 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38030 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38042 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:38048 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56682 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56690 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56706 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56708 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56710 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56720 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56724 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56738 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56750 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56758 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56546 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56556 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56558 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56562 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56564 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56566 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
