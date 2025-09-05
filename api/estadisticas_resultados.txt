@@ -124,7 +124,7 @@
         "espanolas": 82
     },
     "2025": {
-        "total": 3956,
-        "espanolas": 46
+        "total": 4106,
+        "espanolas": 49
     }
 }

@@ -9,6 +9,12 @@ from plotly import graph_objects as go
 import re
 from pathlib import Path
 
+try:
+    from streamlit_plotly_events import plotly_events
+    PLOTLY_EVENTS = True
+except Exception:
+    PLOTLY_EVENTS = False
+
 
 # Lourdes me propuso que en algunas comparativas gráficas se estire la escala del eje Y
 # para que se vea mejor la diferencia entre los valores. Sin embargo streamlit no permite
@@ -277,7 +283,7 @@ if st.session_state.get("carga_completada"):
     def mostrar_kpis(pub_total, autores_unicos, conf_total):
         col1, col2, col3 = st.columns(3)
         with col1:
-            st.markdown(f"<div class='value'>{pub_total}</div><div class='label'>Publications</div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='value'>{pub_total}</div><div class='label'>Different Publications</div>", unsafe_allow_html=True)
         with col2:
             st.markdown(f"<div class='value'>{autores_unicos}</div><div class='label'>Unique Authors</div>", unsafe_allow_html=True)
         with col3:
@@ -325,6 +331,8 @@ if st.session_state.get("carga_completada"):
         except Exception:
             st.error("Failed to fetch conferences from backend.")
             valid = False
+
+            
 
 
     if accion == "Author Evolution":

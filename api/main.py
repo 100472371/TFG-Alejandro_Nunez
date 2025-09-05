@@ -9,6 +9,8 @@ import psycopg2
 from datetime import date
 import subprocess
 import json
+from fastapi import Body
+
 
 from db_manager import (
     ranking_autores,
@@ -25,6 +27,9 @@ from db_manager import (
     obtener_ids_papers_por_keywords,
     top_coauthor_pairs, 
     get_paper_ids_por_pares,
+    mapa_paises_con_preview,
+    detalle_series_por_pais,
+    obtener_ids_papers_por_pais_y_series,
 )
 
 app = FastAPI()
@@ -53,16 +58,16 @@ def obtener_limites_anios(db: psycopg2.extensions.connection = Depends(get_conne
 def endpoint_ranking_autores(year_start: Optional[int] = None, year_end: Optional[int] = None):
     data = ranking_autores(year_start, year_end)
 
-    # Obtener todos los paper_ids únicos de los autores del ranking
     todos_ids = []
-    for autor in data:
-        ids = obtener_ids_papers_por_autor(autor[0])
+    for full_name, _total in data:
+        ids = obtener_ids_papers_por_autor(full_name, year_start=year_start, year_end=year_end)
         todos_ids.extend(ids)
 
     return {
         "autores": [{"full_name": r[0], "total": r[1]} for r in data],
         "paper_ids": list(set(todos_ids))
     }
+
 
 
 @app.post("/exportar_csv/ranking_autores", response_class=StreamingResponse)
@@ -72,11 +77,12 @@ def exportar_csv_ranking_autores(year_start: Optional[int] = None, year_end: Opt
         raise HTTPException(status_code=404, detail="No hay autores")
 
     todos_ids = []
-    for autor in ranking:
-        ids = obtener_ids_papers_por_autor(autor[0])
+    for full_name, _total in ranking:
+        ids = obtener_ids_papers_por_autor(full_name, year_start=year_start, year_end=year_end)
         todos_ids.extend(ids)
 
     return exportar_csv(list(set(todos_ids)))
+
 
 # 2. Ranking autores por conferencia
 @app.get("/conferencias_unicas")
@@ -129,7 +135,7 @@ def endpoint_palabras_clave(year_start: Optional[int] = None, year_end: Optional
 def exportar_csv_palabras_clave(year_start: Optional[int] = None, year_end: Optional[int] = None, top: int = 20):
     palabras = palabras_clave_mas_usadas(year_start, year_end, top)
     keywords = [kw for kw, _ in palabras]
-    paper_ids = obtener_ids_papers_por_keywords(keywords)
+    paper_ids = obtener_ids_papers_por_keywords(keywords,year_start, year_end)
     return exportar_csv(paper_ids)
 
 # 4. Estadísticas de publicaciones españolas
@@ -414,3 +420,49 @@ def estado_ultima_actualizacion():
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error al consultar el estado: {str(e)}")
 
+
+
+@app.get("/map/paises")
+def endpoint_mapa_paises(
+    year_start: Optional[int] = None,
+    year_end:   Optional[int] = None,
+    serie:      Optional[str] = None,
+):
+    rows = mapa_paises_con_preview(year_start, year_end, serie)
+    items = [{
+        "country": r["country"],
+        "total_papers": int(r["total_papers"]),
+        "total_authors": int(r["total_authors"]),
+        "num_series": int(r["num_series"]),
+        "series_preview": r["series_preview"],  # lista corta (top-5) para tooltip
+    } for r in rows]
+    return {"items": items, "params": {"year_start": year_start, "year_end": year_end, "serie": serie}}
+
+@app.get("/map/paises/detalle")
+def endpoint_detalle_pais(
+    country: str,
+    year_start: Optional[int] = None,
+    year_end:   Optional[int] = None,
+    serie:      Optional[str] = None,
+):
+    rows = detalle_series_por_pais(country, year_start, year_end, serie)
+    items = [{
+        "serie": r["serie"],
+        "total_papers": int(r["total_papers"]),
+        "total_authors": int(r["total_authors"]),
+        "years": r["years"],  # array de años
+    } for r in rows]
+    return {"country": country, "items": items, "params": {"year_start": year_start, "year_end": year_end, "serie": serie}}
+
+
+@app.post("/exportar_csv/mapa_paises_detalle", response_class=StreamingResponse)
+def exportar_csv_mapa_paises_detalle(
+    country: str = Body(...),
+    series:  Optional[List[str]] = Body(default=None),
+    year_start: Optional[int] = None,
+    year_end:   Optional[int] = None,
+):
+    ids = obtener_ids_papers_por_pais_y_series(country, series, year_start, year_end)
+    if not ids:
+        raise HTTPException(status_code=404, detail="No hay publicaciones para los filtros indicados.")
+    return exportar_csv(ids)

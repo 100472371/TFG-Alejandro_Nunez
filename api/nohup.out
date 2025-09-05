@@ -1536,3 +1536,1578 @@ INFO:     10.117.129.37:56558 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 
 INFO:     10.117.129.37:56562 - "GET /limites/anios HTTP/1.1" 200 OK
 INFO:     10.117.129.37:56564 - "GET /conferencias_unicas HTTP/1.1" 200 OK
 INFO:     10.117.129.37:56566 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3847874]
+INFO:     Started server process [2523192]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.115.48.7:4648 - "GET / HTTP/1.1" 200 OK
+INFO:     10.115.48.7:4648 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     10.115.48.7:4648 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.115.48.7:4648 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.115.48.7:20149 - "GET /map/paises HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/starlette/concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+  File "/home/alejandro/tfg/api/main.py", line 430, in endpoint_mapa_paises
+    rows = mapa_paises_con_preview(year_start, year_end, serie)
+  File "/home/alejandro/tfg/api/db_manager.py", line 555, in mapa_paises_con_preview
+    cur.execute(query, tuple(params))
+  File "/home/alejandro/env_alejandro/lib/python3.10/site-packages/psycopg2/extras.py", line 236, in execute
+    return super().execute(query, vars)
+psycopg2.errors.SyntaxError: syntax error at or near ";"
+LINE 7: ...    btrim(regexp_replace(replace(c.location, '&amp;', '&'), ...
+                                                             ^
+
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2523192]
+INFO:     Started server process [2524704]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.115.48.7:19104 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.115.48.7:19104 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.115.48.7:1839 - "GET /map/paises HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2524704]
+INFO:     Started server process [175029]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.115.48.7:8188 - "GET / HTTP/1.1" 200 OK
+INFO:     10.115.48.7:8188 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     10.115.48.7:8188 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.115.48.7:8188 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.115.48.7:42271 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.115.48.7:42271 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.115.48.7:30659 - "GET / HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44148 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44160 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44174 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48562 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48574 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48576 - "GET /ranking/autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48580 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48586 - "POST /exportar_csv/ranking_autores?year_start=1994&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48594 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46342 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46344 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:46358 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40290 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40294 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40302 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40310 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40312 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40324 - "GET /ranking/autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40336 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40350 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40366 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54862 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54864 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54868 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+2025-09-05 08:41:33,471 [INFO] Carpeta eliminada: /home/alejandro/tfg/api/downloaded_files
+2025-09-05 08:41:33,471 [INFO] 1 carpeta(s) 'downloaded_files*' eliminadas.
+2025-09-05 08:41:33,471 [INFO] Carpeta de descargas creada: /home/alejandro/tfg/Automatizacion/descargas_acm
+2025-09-05 08:41:35,907 [INFO] Driver de SeleniumBase inicializado con undetected_chromedriver.
+Driver listo y CAPTCHA gestionado
+Página abierta correctamente
+2025-09-05 08:41:50,339 [INFO] Banner de cookies cerrado correctamente
+2025-09-05 08:41:50,340 [INFO] Archivo estadisticas_resultados.txt cargado correctamente.
+2025-09-05 08:41:50,340 [INFO] Primera búsqueda, detectando caja inicial...
+2025-09-05 08:41:50,547 [INFO] Búsqueda '*' lanzada. Total búsquedas: 1
+2025-09-05 08:42:00,579 [INFO] Filtro de año aplicado.
+2025-09-05 08:42:07,628 [INFO] Mínimo permitido detectado: 1980
+2025-09-05 08:42:07,655 [INFO] Máximo permitido detectado: 2025
+2025-09-05 08:42:25,504 [INFO] Filtro de año aplicado.
+2025-09-05 08:42:49,552 [INFO] Hay resultados.
+2025-09-05 08:42:49,596 [INFO] [2025] Total actualizado: 3956 → 4106
+Año 2025 - Nuevo total: 4106
+2025-09-05 08:42:54,450 [INFO] Filtro del año 2025 eliminado.
+2025-09-05 08:42:56,453 [INFO] Búsqueda posterior, detectando caja genérica...
+2025-09-05 08:42:56,694 [INFO] Búsqueda 'affiliation:"Spain"' lanzada. Total búsquedas: 2
+2025-09-05 08:43:07,872 [INFO] Vista ajustada a 50 resultados por página.
+2025-09-05 08:43:10,535 [INFO] Filtro de año aplicado.
+2025-09-05 08:43:17,579 [INFO] Mínimo permitido detectado: 1994
+2025-09-05 08:43:17,611 [INFO] Máximo permitido detectado: 2025
+2025-09-05 08:43:27,021 [INFO] Filtro de año aplicado.
+2025-09-05 08:43:51,228 [INFO] Hay resultados.
+2025-09-05 08:43:51,263 [INFO] [2025] Españolas actualizado: 46 → 49
+Año 2025 - Nuevas españolas: 49
+2025-09-05 08:43:51,263 [INFO] Año 2025...
+2025-09-05 08:43:56,315 [INFO] Filtro de año aplicado.
+2025-09-05 08:44:20,449 [INFO] Hay resultados.
+2025-09-05 08:44:20,450 [INFO] Página 1 del año 2025...
+2025-09-05 08:44:20,661 [INFO] 'Select All' marcado.
+2025-09-05 08:44:20,881 [INFO] 'Export Citations' clickeado.
+2025-09-05 08:44:24,018 [INFO] Descarga BibTeX iniciada.
+2025-09-05 08:44:32,233 [INFO] Popup cerrado.
+2025-09-05 08:44:37,480 [INFO] Fin del año 2025.
+2025-09-05 08:44:42,186 [INFO] Filtro del año 2025 eliminado.
+2025-09-05 08:44:49,446 [WARNING] No se encontró el filtro del año 2025.
+2025-09-05 08:44:49,447 [INFO] Estadísticas guardadas en 'estadisticas_resultados.txt'
+2025-09-05 08:44:49,447 [INFO] Estadísticas por año obtenidas correctamente.
+2025-09-05 08:44:49,448 [INFO] Incluido: downloaded_files/acm.bib
+2025-09-05 08:44:49,449 [INFO] Eliminado: downloaded_files/acm.bib
+2025-09-05 08:44:49,449 [INFO] Archivos combinados en: /home/alejandro/tfg/Automatizacion/descargas_acm/resultados_completos.bib
+2025-09-05 08:44:49,449 [INFO] Archivo estadisticas_resultados.txt reordenado por año correctamente.
+2025-09-05 08:44:49,532 [INFO] Navegador cerrado correctamente.
+Iniciando búsqueda en DBLP: 'OASST-ETC Dataset: Alignment Signals from Eye-tracking Analysis of LLM Responses' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Ángela López-Cardona, Sebastian Idesis, Miguel Barreda-Ángeles, Sergi Abadal, Ioannis Arapakis:
+OASS...
+Bloque 1: 'OASST-ETC Dataset: Alignment Signals from Eye-tracking Analysis of LLM Responses.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'OASST-ETC Dataset: Alignment Signals from Eye-tracking Analysis of LLM Responses.'
+Título más similar encontrado (similitud 0.99): 'OASST-ETC Dataset: Alignment Signals from Eye-tracking Analysis of LLM Responses.'
+Autores extraídos desde DBLP: ['Ángela López-Cardona', 'Sebastian Idesis', 'Miguel Barreda-Ángeles', 'Sergi Abadal', 'Ioannis Arapakis', 'OASST-ETC Dataset: Alignment Signals from Eye-tracking Analysis of LLM Responses.', 'CoRR']
+Autor 'Angela Lopez-Cardona' reemplazado por 'Ángela López-Cardona' (similitud: 1.00)
+Autor 'Sebastian Idesis' reemplazado por 'Sebastian Idesis' (similitud: 1.00)
+Autor 'Miguel Barreda-Ángeles' reemplazado por 'Miguel Barreda-Ángeles' (similitud: 1.00)
+Autor 'Sergi Abadal' reemplazado por 'Sergi Abadal' (similitud: 1.00)
+Autor 'Ioannis Arapakis' reemplazado por 'Ioannis Arapakis' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Developing Human-Centered Intelligent Learning Systems: the application of CARAIX framework' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Miguel Portaz, Angeles Manjarrés Riesco, Olga C. Santos, Raúl Cabestrero, Pilar Quirós, Mar Hermosil...
+Bloque 1: 'Developing Human-Centered Intelligent Learning Systems: the application of CARAIX framework.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Developing Human-Centered Intelligent Learning Systems: the application of CARAIX framework.'
+Título más similar encontrado (similitud 0.99): 'Developing Human-Centered Intelligent Learning Systems: the application of CARAIX framework.'
+Autores extraídos desde DBLP: ['Miguel Portaz', 'Angeles Manjarrés Riesco', 'Olga C. Santos', 'Raúl Cabestrero', 'Pilar Quirós', 'Mar Hermosilla', 'David Puertas-Ramirez', 'Jesus Boticario', 'Gadea Lucas-Pérez', 'Ana Serrano Mamolar', 'Álvar Arnaiz-González', 'Miguel Arevalillo-Herráez', 'David Arnau', 'Pablo Arnau-González', 'Raúl Fernandez-Matellan', 'David Martín Gómez', 'Developing Human-Centered Intelligent Learning Systems: the application of CARAIX framework.', 'UMAP (Adjunct Publication)']
+Autor 'Miguel Portaz' reemplazado por 'Miguel Portaz' (similitud: 1.00)
+Autor 'Angeles Manjarrés' reemplazado por 'Angeles Manjarrés Riesco' (similitud: 0.83)
+Autor 'Olga C. Santos' reemplazado por 'Olga C. Santos' (similitud: 1.00)
+Autor 'Raúl Cabestrero' reemplazado por 'Raúl Cabestrero' (similitud: 1.00)
+Autor 'Pilar Quirós' reemplazado por 'Pilar Quirós' (similitud: 1.00)
+Autor 'Mar Hermosilla' reemplazado por 'Mar Hermosilla' (similitud: 1.00)
+Autor 'David Puertas-Ramirez' reemplazado por 'David Puertas-Ramirez' (similitud: 1.00)
+Autor 'Jesus G. Boticario' reemplazado por 'Jesus Boticario' (similitud: 0.91)
+Autor 'Gadea Lucas Pérez' reemplazado por 'Gadea Lucas-Pérez' (similitud: 1.00)
+Autor 'Ana Serrano-Mamolar' reemplazado por 'Ana Serrano Mamolar' (similitud: 1.00)
+Autor 'Álvar Arnaiz-González' reemplazado por 'Álvar Arnaiz-González' (similitud: 1.00)
+Autor 'Miguel Arevalillo-Herráez' reemplazado por 'Miguel Arevalillo-Herráez' (similitud: 1.00)
+Autor 'David Arnau' reemplazado por 'David Arnau' (similitud: 1.00)
+Autor 'Pablo Arnau-González' reemplazado por 'Pablo Arnau-González' (similitud: 1.00)
+Autor 'Raúl Fernández-Matellán' reemplazado por 'Raúl Fernandez-Matellan' (similitud: 1.00)
+Autor 'David Martin Gomez' reemplazado por 'David Martín Gómez' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Social eXtended Reality (XR) and Virtual Production: Toward New Engaging Immersive Experiences' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Mario Montagud Climent, Álvaro Egea Benavente, Marc Martos Cabré, Javier Montesa, Francisco Ibañez, ...
+Bloque 1: 'Social eXtended Reality (XR) and Virtual Production: Toward New Engaging Immersive Experiences.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Social eXtended Reality (XR) and Virtual Production: Toward New Engaging Immersive Experiences.'
+Título más similar encontrado (similitud 0.99): 'Social eXtended Reality (XR) and Virtual Production: Toward New Engaging Immersive Experiences.'
+Autores extraídos desde DBLP: ['Mario Montagud Climent', 'Álvaro Egea Benavente', 'Marc Martos Cabré', 'Javier Montesa', 'Francisco Ibañez', 'Sergi Fernández', 'Social eXtended Reality (XR) and Virtual Production: Toward New Engaging Immersive Experiences.', 'IMX']
+Autor 'Mario Montagud Climent' reemplazado por 'Mario Montagud Climent' (similitud: 1.00)
+Autor 'Álvaro Egea Benavente' reemplazado por 'Álvaro Egea Benavente' (similitud: 1.00)
+Autor 'Marc Martos Cabré' reemplazado por 'Marc Martos Cabré' (similitud: 1.00)
+Autor 'Javier Montesa' reemplazado por 'Javier Montesa' (similitud: 1.00)
+Autor 'Francisco Ibañez' reemplazado por 'Francisco Ibañez' (similitud: 1.00)
+Autor 'Sergi Fernández' reemplazado por 'Sergi Fernández' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'FlexiVol: a Volumetric Display with an Elastic Diffuser to Enable Reach-Through Interaction' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Elodie Bouzbib, Iosune Sarasate, Unai Javier Fernández, Ivan Fernández, Manuel López-Amo, Iñigo Ezcu...
+Bloque 1: 'FlexiVol: a Volumetric Display with an Elastic Diffuser to Enable Reach-Through Interaction.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'FlexiVol: a Volumetric Display with an Elastic Diffuser to Enable Reach-Through Interaction.'
+Título más similar encontrado (similitud 0.99): 'FlexiVol: a Volumetric Display with an Elastic Diffuser to Enable Reach-Through Interaction.'
+Autores extraídos desde DBLP: ['Elodie Bouzbib', 'Iosune Sarasate', 'Unai Javier Fernández', 'Ivan Fernández', 'Manuel López-Amo', 'Iñigo Ezcurdia', 'Asier Marzo', 'FlexiVol: a Volumetric Display with an Elastic Diffuser to Enable Reach-Through Interaction.', 'CHI']
+Autor 'Elodie Bouzbib' reemplazado por 'Elodie Bouzbib' (similitud: 1.00)
+Autor 'Iosune Sarasate' reemplazado por 'Iosune Sarasate' (similitud: 1.00)
+Autor 'Unai Javier Fernández' reemplazado por 'Unai Javier Fernández' (similitud: 1.00)
+Autor 'Ivan Fernández' reemplazado por 'Ivan Fernández' (similitud: 1.00)
+Autor 'Manuel Lopez-Amo' reemplazado por 'Manuel López-Amo' (similitud: 1.00)
+Autor 'Iñigo Ezcurdia' reemplazado por 'Iñigo Ezcurdia' (similitud: 1.00)
+Autor 'Asier Marzo' reemplazado por 'Asier Marzo' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Immersive Cognitive Training for Job Integration with people with Intellectual Disabilities' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Marta Goyena, Matteo Dal Magro, Martina Merolli, David Barbero García, Carlos Cortés, Marta Orduna, ...
+Bloque 1: 'Immersive Cognitive Training for Job Integration with people with Intellectual Disabilities.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Immersive Cognitive Training for Job Integration with people with Intellectual Disabilities.'
+Título más similar encontrado (similitud 0.99): 'Immersive Cognitive Training for Job Integration with people with Intellectual Disabilities.'
+Autores extraídos desde DBLP: ['Marta Goyena', 'Matteo Dal Magro', 'Martina Merolli', 'David Barbero García', 'Carlos Cortés', 'Marta Orduna', 'Ainhoa Fernández-Alcaide', 'María Nava-Ruiz', 'Jesús Gutiérrez', 'Pablo Pérez', 'Narciso García', 'Immersive Cognitive Training for Job Integration with people with Intellectual Disabilities.', 'IMX']
+Autor 'Marta Goyena' reemplazado por 'Marta Goyena' (similitud: 1.00)
+Autor 'Matteo Dal Magro' reemplazado por 'Matteo Dal Magro' (similitud: 1.00)
+Autor 'Martina Merolli' reemplazado por 'Martina Merolli' (similitud: 1.00)
+Autor 'David Barbero Garcı́a' reemplazado por 'David Barbero García' (similitud: 0.95)
+Autor 'Carlos Cortés' reemplazado por 'Carlos Cortés' (similitud: 1.00)
+Autor 'Marta Orduna' reemplazado por 'Marta Orduna' (similitud: 1.00)
+Autor 'Ainhoa Fernández-Alcaide' reemplazado por 'Ainhoa Fernández-Alcaide' (similitud: 1.00)
+Autor 'Mar\á Nava-Ruiz' reemplazado por 'María Nava-Ruiz' (similitud: 0.93)
+Autor 'Jesus Gutiérrez' reemplazado por 'Jesús Gutiérrez' (similitud: 1.00)
+Autor 'Pablo Perez' reemplazado por 'Pablo Pérez' (similitud: 1.00)
+Autor '́ Narciso Garc\'' reemplazado por 'Narciso García' (similitud: 0.92)
+Iniciando búsqueda en DBLP: 'A Study on Immersive Behavioral Therapy for Individuals with Intellectual Disabilities with Fear of Stairs' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Marta Goyena, Carlos Cortés, Marta Orduna, Matteo Dal Magro, Ainhoa Fernández-Alcaide, María Nava-Ru...
+Bloque 1: 'A Study on Immersive Behavioral Therapy for Individuals with Intellectual Disabilities with Fear of Stairs.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'A Study on Immersive Behavioral Therapy for Individuals with Intellectual Disabilities with Fear of Stairs.'
+Título más similar encontrado (similitud 1.00): 'A Study on Immersive Behavioral Therapy for Individuals with Intellectual Disabilities with Fear of Stairs.'
+Autores extraídos desde DBLP: ['Marta Goyena', 'Carlos Cortés', 'Marta Orduna', 'Matteo Dal Magro', 'Ainhoa Fernández-Alcaide', 'María Nava-Ruiz', 'Jesús Gutiérrez', 'Pablo Pérez', 'Narciso García', 'A Study on Immersive Behavioral Therapy for Individuals with Intellectual Disabilities with Fear of Stairs.', 'IMX']
+Autor 'Marta Goyena' reemplazado por 'Marta Goyena' (similitud: 1.00)
+Autor 'Carlos Cortés' reemplazado por 'Carlos Cortés' (similitud: 1.00)
+Autor 'Marta Orduna' reemplazado por 'Marta Orduna' (similitud: 1.00)
+Autor 'Matteo Dal Magro' reemplazado por 'Matteo Dal Magro' (similitud: 1.00)
+Autor 'Ainhoa Fernández-Alcaide' reemplazado por 'Ainhoa Fernández-Alcaide' (similitud: 1.00)
+Autor 'Marı́a Nava-Ruiz' reemplazado por 'María Nava-Ruiz' (similitud: 0.93)
+Autor 'Jesús Gutiérrez' reemplazado por 'Jesús Gutiérrez' (similitud: 1.00)
+Autor 'Pablo Perez' reemplazado por 'Pablo Pérez' (similitud: 1.00)
+Autor 'Narciso Garc\á' reemplazado por 'Narciso García' (similitud: 0.93)
+Iniciando búsqueda en DBLP: 'RehbeCa in Action! A Demo of Innovative Mobile Cervical Rehabilitation' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+0 bloques encontrados en la página de resultados.
+WARNING:root:No se encontró ningún título válido en DBLP.
+Iniciando búsqueda en DBLP: 'MoRTELaban: a Neurosymbolic Framework for Motion Representation and Analysis based on Labanotation and Laban Movement Analysis' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Roberto Perez-Martinez, Alberto Casas-Ortiz, Olga C. Santos:
+MoRTELaban: a Neurosymbolic Framework f...
+Bloque 1: 'MoRTELaban: a Neurosymbolic Framework for Motion Representation and Analysis based on Labanotation and Laban Movement Analysis.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'MoRTELaban: a Neurosymbolic Framework for Motion Representation and Analysis based on Labanotation and Laban Movement Analysis.'
+Título más similar encontrado (similitud 1.00): 'MoRTELaban: a Neurosymbolic Framework for Motion Representation and Analysis based on Labanotation and Laban Movement Analysis.'
+Autores extraídos desde DBLP: ['Roberto Perez-Martinez', 'Alberto Casas-Ortiz', 'Olga C. Santos', 'MoRTELaban: a Neurosymbolic Framework for Motion Representation and Analysis based on Labanotation and Laban Movement Analysis.', 'UMAP (Adjunct Publication)']
+Autor 'Roberto Perez-Martinez' reemplazado por 'Roberto Perez-Martinez' (similitud: 1.00)
+Autor 'Alberto Casas-Ortiz' reemplazado por 'Alberto Casas-Ortiz' (similitud: 1.00)
+Autor 'Olga C. Santos' reemplazado por 'Olga C. Santos' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Towards Cultural Preservation of Traditional Motion Knowledge through Automated Annotations with MoRTELaban' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Roberto Perez-Martinez, Alberto Casas-Ortiz, Olga C. Santos:
+Towards Cultural Preservation of Tradit...
+Bloque 1: 'Towards Cultural Preservation of Traditional Motion Knowledge through Automated Annotations with MoRTELaban.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'Towards Cultural Preservation of Traditional Motion Knowledge through Automated Annotations with MoRTELaban.'
+Título más similar encontrado (similitud 1.00): 'Towards Cultural Preservation of Traditional Motion Knowledge through Automated Annotations with MoRTELaban.'
+Autores extraídos desde DBLP: ['Roberto Perez-Martinez', 'Alberto Casas-Ortiz', 'Olga C. Santos', 'Towards Cultural Preservation of Traditional Motion Knowledge through Automated Annotations with MoRTELaban.', 'UMAP (Adjunct Publication)']
+Autor 'Roberto Perez-Martinez' reemplazado por 'Roberto Perez-Martinez' (similitud: 1.00)
+Autor 'Alberto Casas-Ortiz' reemplazado por 'Alberto Casas-Ortiz' (similitud: 1.00)
+Autor 'Olga C. Santos' reemplazado por 'Olga C. Santos' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'The XR Table: Envisioning The Future of Remote Dining Experiences Using Immersive Telepresence' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Andrés Santos-Torres, Patricia de Torres Coll, Tamás Bukits, Ramón Perisé, Sergio Cabrero Barros:
+Th...
+Bloque 1: 'The XR Table: Envisioning The Future of Remote Dining Experiences Using Immersive Telepresence.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'The XR Table: Envisioning The Future of Remote Dining Experiences Using Immersive Telepresence.'
+Título más similar encontrado (similitud 0.99): 'The XR Table: Envisioning The Future of Remote Dining Experiences Using Immersive Telepresence.'
+Autores extraídos desde DBLP: ['Andrés Santos-Torres', 'Patricia de Torres Coll', 'Tamás Bukits', 'Ramón Perisé', 'Sergio Cabrero Barros', 'The XR Table: Envisioning The Future of Remote Dining Experiences Using Immersive Telepresence.', 'Conference on Designing Interactive Systems']
+Autor 'Andrés Santos-Torres' reemplazado por 'Andrés Santos-Torres' (similitud: 1.00)
+Autor 'Patricia de Torres Coll' reemplazado por 'Patricia de Torres Coll' (similitud: 1.00)
+Autor 'Tamás Bukits' reemplazado por 'Tamás Bukits' (similitud: 1.00)
+Autor 'Ramón Perisé' reemplazado por 'Ramón Perisé' (similitud: 1.00)
+Autor 'Sergio Cabrero Barros' reemplazado por 'Sergio Cabrero Barros' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'The Impact of Segmentation Methods for Avatar representation on User Experience in a Task-Based XR experience' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Carlos Cortés, David Barbero García, Jesús Gutiérrez, Narciso García:
+The Impact of Segmentation Met...
+Bloque 1: 'The Impact of Segmentation Methods for Avatar representation on User Experience in a Task-Based XR experience.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'The Impact of Segmentation Methods for Avatar representation on User Experience in a Task-Based XR experience.'
+Título más similar encontrado (similitud 1.00): 'The Impact of Segmentation Methods for Avatar representation on User Experience in a Task-Based XR experience.'
+Autores extraídos desde DBLP: ['Carlos Cortés', 'David Barbero García', 'Jesús Gutiérrez', 'Narciso García', 'The Impact of Segmentation Methods for Avatar representation on User Experience in a Task-Based XR experience.', 'IMX']
+Autor 'Carlos Cortés' reemplazado por 'Carlos Cortés' (similitud: 1.00)
+Autor 'David Barbero Garcı́a' reemplazado por 'David Barbero García' (similitud: 0.95)
+Autor 'Jesus Gutiérrez' reemplazado por 'Jesús Gutiérrez' (similitud: 1.00)
+Autor 'Narciso Garc\á' reemplazado por 'Narciso García' (similitud: 0.93)
+Iniciando búsqueda en DBLP: 'A Comparative Study of Scanpath Models in Graph-Based Visualization' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+2 bloques encontrados en la página de resultados.
+Procesando bloque 1: Ángela López-Cardona, Parvin Emami, Sebastian Idesis, Saravanakumar Duraisamy, Luis A. Leiva, Ioanni...
+Bloque 1: 'A Comparative Study of Scanpath Models in Graph-Based Visualization.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'A Comparative Study of Scanpath Models in Graph-Based Visualization.'
+Procesando bloque 2: Ángela López-Cardona, Parvin Emami, Sebastian Idesis, Saravanakumar Duraisamy, Luis A. Leiva, Ioanni...
+Bloque 2: 'A Comparative Study of Scanpath Models in Graph-Based Visualization.' (similitud: 0.99)
+Título más similar encontrado (similitud 0.99): 'A Comparative Study of Scanpath Models in Graph-Based Visualization.'
+Autores extraídos desde DBLP: ['Ángela López-Cardona', 'Parvin Emami', 'Sebastian Idesis', 'Saravanakumar Duraisamy', 'Luis A. Leiva', 'Ioannis Arapakis', 'A Comparative Study of Scanpath Models in Graph-Based Visualization.', 'ETRA']
+Autor 'Angela Lopez-Cardona' reemplazado por 'Ángela López-Cardona' (similitud: 1.00)
+Autor 'Parvin Emami' reemplazado por 'Parvin Emami' (similitud: 1.00)
+Autor 'Sebastian Idesis' reemplazado por 'Sebastian Idesis' (similitud: 1.00)
+Autor 'Saravanakumar Duraisamy' reemplazado por 'Saravanakumar Duraisamy' (similitud: 1.00)
+Autor 'Luis A. Leiva' reemplazado por 'Luis A. Leiva' (similitud: 1.00)
+Autor 'Ioannis Arapakis' reemplazado por 'Ioannis Arapakis' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'The Myth of the Cave. Generated shadows and co-creation of light' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: David Serra Navarro:
+The Myth of the Cave. Generated shadows and co-creation of light. Creativity & ...
+Bloque 1: 'The Myth of the Cave. Generated shadows and co-creation of light.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'The Myth of the Cave. Generated shadows and co-creation of light.'
+Título más similar encontrado (similitud 0.99): 'The Myth of the Cave. Generated shadows and co-creation of light.'
+Autores extraídos desde DBLP: ['David Serra Navarro', 'The Myth of the Cave. Generated shadows and co-creation of light.', 'Creativity & Cognition']
+Autor 'David Serra Navarro' reemplazado por 'David Serra Navarro' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'An In-Progress Research through Design Exploration of the Frictions Emerging in Playful Public Expression Systems (and How to Navigate Them)' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Ferran Altarriba Bertran, Jordi Márquez Puig, Jur Corominas:
+An In-Progress Research through Design ...
+Bloque 1: 'An In-Progress Research through Design Exploration of the Frictions Emerging in Playful Public Expression Systems (and How to Navigate Them).' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'An In-Progress Research through Design Exploration of the Frictions Emerging in Playful Public Expression Systems (and How to Navigate Them).'
+Título más similar encontrado (similitud 1.00): 'An In-Progress Research through Design Exploration of the Frictions Emerging in Playful Public Expression Systems (and How to Navigate Them).'
+Autores extraídos desde DBLP: ['Ferran Altarriba Bertran', 'Jordi Márquez Puig', 'Jur Corominas', 'An In-Progress Research through Design Exploration of the Frictions Emerging in Playful Public Expression Systems (and How to Navigate Them).', 'TEI']
+Autor 'Ferran Altarriba Bertran' reemplazado por 'Ferran Altarriba Bertran' (similitud: 1.00)
+Autor 'Jordi Márquez Puig' reemplazado por 'Jordi Márquez Puig' (similitud: 1.00)
+Autor 'Jur Corominas' reemplazado por 'Jur Corominas' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Privacy Perceptions of Custom GPTs by Users and Creators' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Rongjun Ma, Caterina Maidhof, Juan Carlos Carrillo, Janne Lindqvist, Jose Such:
+Privacy Perceptions ...
+Bloque 1: 'Privacy Perceptions of Custom GPTs by Users and Creators.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Privacy Perceptions of Custom GPTs by Users and Creators.'
+Título más similar encontrado (similitud 0.99): 'Privacy Perceptions of Custom GPTs by Users and Creators.'
+Autores extraídos desde DBLP: ['Rongjun Ma', 'Caterina Maidhof', 'Juan Carlos Carrillo', 'Janne Lindqvist', 'Jose Such', 'Privacy Perceptions of Custom GPTs by Users and Creators.', 'CHI']
+Autor 'Rongjun Ma' reemplazado por 'Rongjun Ma' (similitud: 1.00)
+Autor 'Caterina Maidhof' reemplazado por 'Caterina Maidhof' (similitud: 1.00)
+Autor 'Juan Carlos Carrillo' reemplazado por 'Juan Carlos Carrillo' (similitud: 1.00)
+Autor 'Janne Lindqvist' reemplazado por 'Janne Lindqvist' (similitud: 1.00)
+Autor 'Jose Such' reemplazado por 'Jose Such' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Towards Personalized Physiotherapy via Common Semantic Fusion: Multi-Modal Learning, Computer Vision and Empathetic NLP' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Victor Garcia:
+Towards Personalized Physiotherapy via Common Semantic Fusion: Multi-Modal Learning, ...
+Bloque 1: 'Towards Personalized Physiotherapy via Common Semantic Fusion: Multi-Modal Learning, Computer Vision and Empathetic NLP.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'Towards Personalized Physiotherapy via Common Semantic Fusion: Multi-Modal Learning, Computer Vision and Empathetic NLP.'
+Título más similar encontrado (similitud 1.00): 'Towards Personalized Physiotherapy via Common Semantic Fusion: Multi-Modal Learning, Computer Vision and Empathetic NLP.'
+Autores extraídos desde DBLP: ['Victor Garcia', 'Towards Personalized Physiotherapy via Common Semantic Fusion: Multi-Modal Learning, Computer Vision and Empathetic NLP.', 'UMAP']
+Autor 'Victor Garcia' reemplazado por 'Victor Garcia' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Cognitive-Emotional Modeling and Hybrid Intelligence: A User-Centered Approach to Psychomotor Interventions in Active Aging' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Dayris Rapado:
+Cognitive-Emotional Modeling and Hybrid Intelligence: A User-Centered Approach to Psy...
+Bloque 1: 'Cognitive-Emotional Modeling and Hybrid Intelligence: A User-Centered Approach to Psychomotor Interventions in Active Aging.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'Cognitive-Emotional Modeling and Hybrid Intelligence: A User-Centered Approach to Psychomotor Interventions in Active Aging.'
+Título más similar encontrado (similitud 1.00): 'Cognitive-Emotional Modeling and Hybrid Intelligence: A User-Centered Approach to Psychomotor Interventions in Active Aging.'
+Autores extraídos desde DBLP: ['Dayris Rapado', 'Cognitive-Emotional Modeling and Hybrid Intelligence: A User-Centered Approach to Psychomotor Interventions in Active Aging.', 'UMAP']
+Autor 'Dayris Rapado' reemplazado por 'Dayris Rapado' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Tracing: The Forgotten Task of ISO 9241' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+0 bloques encontrados en la página de resultados.
+WARNING:root:No se encontró ningún título válido en DBLP.
+Iniciando búsqueda en DBLP: 'Temporal Trajectories: Characterizing Somatic Experiences that Unfold Over Time' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Laia Turmo Vidal, Ana Tajadura-Jiménez, Judith Ley-Flores:
+Temporal Trajectories: Characterizing Som...
+Bloque 1: 'Temporal Trajectories: Characterizing Somatic Experiences that Unfold Over Time.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Temporal Trajectories: Characterizing Somatic Experiences that Unfold Over Time.'
+Título más similar encontrado (similitud 0.99): 'Temporal Trajectories: Characterizing Somatic Experiences that Unfold Over Time.'
+Autores extraídos desde DBLP: ['Laia Turmo Vidal', 'Ana Tajadura-Jiménez', 'Judith Ley-Flores', 'Temporal Trajectories: Characterizing Somatic Experiences that Unfold Over Time.', 'Conference on Designing Interactive Systems']
+Autor 'Laia Turmo Vidal' reemplazado por 'Laia Turmo Vidal' (similitud: 1.00)
+Autor 'Ana Tajadura-Jiménez' reemplazado por 'Ana Tajadura-Jiménez' (similitud: 1.00)
+Autor 'Judith Ley-Flores' reemplazado por 'Judith Ley-Flores' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Empirical Research Methods for Human-Computer Interaction' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+8 bloques encontrados en la página de resultados.
+Procesando bloque 1: I. Scott MacKenzie, Maria Francesca Roig-Maimó, Ramon Mas Sansó:
+Empirical Research Methods for Huma...
+Bloque 1: 'Empirical Research Methods for Human-Computer Interaction.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Empirical Research Methods for Human-Computer Interaction.'
+Procesando bloque 2: I. Scott MacKenzie, Janet C. Read, Matthew Horton:
+Empirical Research Methods for Human-Computer Int...
+Bloque 2 descartado (no contiene año 2025)
+Procesando bloque 3: I. Scott MacKenzie, Janet C. Read, Matthew Horton:
+Empirical research methods for human-computer int...
+Bloque 3 descartado (no contiene año 2025)
+Procesando bloque 4: Ian Scott MacKenzie, Janet C. Read, Matthew Horton:
+Empirical Research Methods for Human-Computer In...
+Bloque 4 descartado (no contiene año 2025)
+Procesando bloque 5: I. Scott MacKenzie, Steven J. Castellucci:
+Empirical Research Methods for Human-Computer Interaction...
+Bloque 5 descartado (no contiene año 2025)
+Procesando bloque 6: I. Scott MacKenzie, Steven J. Castellucci:
+Empirical Research Methods for Human-Computer Interaction...
+Bloque 6 descartado (no contiene año 2025)
+Procesando bloque 7: I. Scott MacKenzie, Steven J. Castellucci:
+Empirical Research Methods for Human-Computer Interaction...
+Bloque 7 descartado (no contiene año 2025)
+Procesando bloque 8: I. Scott MacKenzie, Steven J. Castellucci:
+Empirical research methods for human-computer interaction...
+Bloque 8 descartado (no contiene año 2025)
+Título más similar encontrado (similitud 0.99): 'Empirical Research Methods for Human-Computer Interaction.'
+Autores extraídos desde DBLP: ['I. Scott MacKenzie', 'Maria Francesca Roig-Maimó', 'Ramon Mas Sansó', 'Empirical Research Methods for Human-Computer Interaction.', 'CHI Extended Abstracts']
+Autor 'Scott MacKenzie' reemplazado por 'I. Scott MacKenzie' (similitud: 0.91)
+Autor 'Maria Francesca Roig-Maimó' reemplazado por 'Maria Francesca Roig-Maimó' (similitud: 1.00)
+Autor 'Ramon Mas-Sansó' reemplazado por 'Ramon Mas Sansó' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Mirror Dwellers in Social VR: Investigating Reasons and Perception of Mirror Watching' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+0 bloques encontrados en la página de resultados.
+WARNING:root:No se encontró ningún título válido en DBLP.
+Iniciando búsqueda en DBLP: 'Impact of Explanation Techniques and Representations on Users'  Comprehension and Confidence in Explainable AI' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+0 bloques encontrados en la página de resultados.
+WARNING:root:No se encontró ningún título válido en DBLP.
+Iniciando búsqueda en DBLP: 'CT4ALL: Towards Putting Teachers in the Loop to Advance Automated Computational Thinking Metric Assessments in Game-Based Learning' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Giovanni Maria Troiano, Michael P. Cassidy, Daniel Escobar Morales, Guillermo Pons, Amir Abdollahi, ...
+Bloque 1: 'CT4ALL: Towards Putting Teachers in the Loop to Advance Automated Computational Thinking Metric Assessments in Game-Based Learning.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'CT4ALL: Towards Putting Teachers in the Loop to Advance Automated Computational Thinking Metric Assessments in Game-Based Learning.'
+Título más similar encontrado (similitud 1.00): 'CT4ALL: Towards Putting Teachers in the Loop to Advance Automated Computational Thinking Metric Assessments in Game-Based Learning.'
+Autores extraídos desde DBLP: ['Giovanni Maria Troiano', 'Michael P. Cassidy', 'Daniel Escobar Morales', 'Guillermo Pons', 'Amir Abdollahi', 'Gregorio Robles', 'Gillian Puttick', 'Casper Harteveld', 'CT4ALL: Towards Putting Teachers in the Loop to Advance Automated Computational Thinking Metric Assessments in Game-Based Learning.', 'CHI']
+Autor 'Giovanni M Troiano' reemplazado por 'Giovanni Maria Troiano' (similitud: 0.90)
+Autor 'Michael Cassidy' reemplazado por 'Michael P. Cassidy' (similitud: 0.91)
+Autor 'Daniel Escobar Morales' reemplazado por 'Daniel Escobar Morales' (similitud: 1.00)
+Autor 'Guillermo Pons' reemplazado por 'Guillermo Pons' (similitud: 1.00)
+Autor 'Amir Abdollahi' reemplazado por 'Amir Abdollahi' (similitud: 1.00)
+Autor 'Gregorio Robles' reemplazado por 'Gregorio Robles' (similitud: 1.00)
+Autor 'Gillian Puttick' reemplazado por 'Gillian Puttick' (similitud: 1.00)
+Autor 'Casper Harteveld' reemplazado por 'Casper Harteveld' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'How Can Interactive Technology Help Us to Experience Joy With(in) the Forest? Towards a Taxonomy of Tech for Joyful Human-Forest Interactions' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Ferran Altarriba Bertran, Oguz 'Oz' Buruk, Jordi Márquez Puig, Juho Hamari:
+How Can Interactive Tech...
+Bloque 1: 'How Can Interactive Technology Help Us to Experience Joy With(in) the Forest? Towards a Taxonomy of Tech for Joyful Human-Forest Interactions.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'How Can Interactive Technology Help Us to Experience Joy With(in) the Forest? Towards a Taxonomy of Tech for Joyful Human-Forest Interactions.'
+Título más similar encontrado (similitud 1.00): 'How Can Interactive Technology Help Us to Experience Joy With(in) the Forest? Towards a Taxonomy of Tech for Joyful Human-Forest Interactions.'
+Autores extraídos desde DBLP: ['Ferran Altarriba Bertran', "Oguz 'Oz' Buruk", 'Jordi Márquez Puig', 'Juho Hamari', 'How Can Interactive Technology Help Us to Experience Joy With(in) the Forest? Towards a Taxonomy of Tech for Joyful Human-Forest Interactions.', 'CHI']
+Autor 'Ferran Altarriba Bertran' reemplazado por 'Ferran Altarriba Bertran' (similitud: 1.00)
+Autor 'Oğuz ' Oz' Buruk' reemplazado por 'Oguz 'Oz' Buruk' (similitud: 1.00)
+Autor 'Jordi Márquez Puig' reemplazado por 'Jordi Márquez Puig' (similitud: 1.00)
+Autor 'Juho Hamari' reemplazado por 'Juho Hamari' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Embodied Ideation, Toolkits, and Sketching' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: José Manuel Vega-Cebrián, Andreas Lindegren, Mafalda Gamboa, Ana Tajadura-Jiménez, Ylva Fernaeus, El...
+Bloque 1: 'Embodied Ideation, Toolkits, and Sketching.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Embodied Ideation, Toolkits, and Sketching.'
+Título más similar encontrado (similitud 0.99): 'Embodied Ideation, Toolkits, and Sketching.'
+Autores extraídos desde DBLP: ['José Manuel Vega-Cebrián', 'Andreas Lindegren', 'Mafalda Gamboa', 'Ana Tajadura-Jiménez', 'Ylva Fernaeus', 'Elena Márquez Segura', 'Embodied Ideation, Toolkits, and Sketching.', 'TEI']
+Autor 'José Manuel Vega-Cebrián' reemplazado por 'José Manuel Vega-Cebrián' (similitud: 1.00)
+Autor 'Andreas Lindegren' reemplazado por 'Andreas Lindegren' (similitud: 1.00)
+Autor 'Mafalda Gamboa' reemplazado por 'Mafalda Gamboa' (similitud: 1.00)
+Autor 'Ana Tajadura-Jiménez' reemplazado por 'Ana Tajadura-Jiménez' (similitud: 1.00)
+Autor 'Ylva Fernaeus' reemplazado por 'Ylva Fernaeus' (similitud: 1.00)
+Autor 'Elena Márquez Segura' reemplazado por 'Elena Márquez Segura' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'No Evidence for LLMs Being Useful in Problem Reframing' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+2 bloques encontrados en la página de resultados.
+Procesando bloque 1: Joongi Shin, Anna Polyanskaya, Andrés Lucero, Antti Oulasvirta:
+No Evidence for LLMs Being Useful in...
+Bloque 1: 'No Evidence for LLMs Being Useful in Problem Reframing.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'No Evidence for LLMs Being Useful in Problem Reframing.'
+Procesando bloque 2: Joongi Shin, Anna Polyanskaya, Andrés Lucero, Antti Oulasvirta:
+No Evidence for LLMs Being Useful in...
+Bloque 2: 'No Evidence for LLMs Being Useful in Problem Reframing.' (similitud: 0.99)
+Título más similar encontrado (similitud 0.99): 'No Evidence for LLMs Being Useful in Problem Reframing.'
+Autores extraídos desde DBLP: ['Joongi Shin', 'Anna Polyanskaya', 'Andrés Lucero', 'Antti Oulasvirta', 'No Evidence for LLMs Being Useful in Problem Reframing.', 'CHI']
+Autor 'Joongi Shin' reemplazado por 'Joongi Shin' (similitud: 1.00)
+Autor 'Anna Polyanskaya' reemplazado por 'Anna Polyanskaya' (similitud: 1.00)
+Autor 'Andrés Lucero' reemplazado por 'Andrés Lucero' (similitud: 1.00)
+Autor 'Antti Oulasvirta' reemplazado por 'Antti Oulasvirta' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Designing for Qualitative Evaluation of Synthetic Medical Data' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Isabella Barbosa Silva, Elsa Oliveira, Ricardo Melo, Luís Rosado, César Gálvez-Barrón, Irene Bernade...
+Bloque 1: 'Designing for Qualitative Evaluation of Synthetic Medical Data.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Designing for Qualitative Evaluation of Synthetic Medical Data.'
+Título más similar encontrado (similitud 0.99): 'Designing for Qualitative Evaluation of Synthetic Medical Data.'
+Autores extraídos desde DBLP: ['Isabella Barbosa Silva', 'Elsa Oliveira', 'Ricardo Melo', 'Luís Rosado', 'César Gálvez-Barrón', 'Irene Bernadet Heijink', 'Sem Hoogteijling', 'Iñigo Gabilondo', 'Designing for Qualitative Evaluation of Synthetic Medical Data.', 'CHI Extended Abstracts']
+Autor 'Isabella Barbosa Silva' reemplazado por 'Isabella Barbosa Silva' (similitud: 1.00)
+Autor 'Elsa Oliveira' reemplazado por 'Elsa Oliveira' (similitud: 1.00)
+Autor 'Ricardo Melo' reemplazado por 'Ricardo Melo' (similitud: 1.00)
+Autor 'Luı́s Rosado' reemplazado por 'Luís Rosado' (similitud: 0.91)
+Autor 'César Gálvez-Barrón' reemplazado por 'César Gálvez-Barrón' (similitud: 1.00)
+Autor 'Irene Bernadet Heijink' reemplazado por 'Irene Bernadet Heijink' (similitud: 1.00)
+Autor 'Sem Hoogteijling' reemplazado por 'Sem Hoogteijling' (similitud: 1.00)
+Autor 'Iñigo Gabilondo' reemplazado por 'Iñigo Gabilondo' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Engage and Mobilize! Understanding Evolving Patterns of Social Media Usage in Emergency Management' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Hemant Purohit, Cody Buntain, Amanda Lee Hughes, Steve Peterson, Valerio Lorini, Carlos Castillo:
+En...
+Bloque 1: 'Engage and Mobilize! Understanding Evolving Patterns of Social Media Usage in Emergency Management.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Engage and Mobilize! Understanding Evolving Patterns of Social Media Usage in Emergency Management.'
+Título más similar encontrado (similitud 0.99): 'Engage and Mobilize! Understanding Evolving Patterns of Social Media Usage in Emergency Management.'
+Autores extraídos desde DBLP: ['Hemant Purohit', 'Cody Buntain', 'Amanda Lee Hughes', 'Steve Peterson', 'Valerio Lorini', 'Carlos Castillo', 'Engage and Mobilize! Understanding Evolving Patterns of Social Media Usage in Emergency Management.', 'CoRR']
+Autor 'Hemant Purohit' reemplazado por 'Hemant Purohit' (similitud: 1.00)
+Autor 'Cody Buntain' reemplazado por 'Cody Buntain' (similitud: 1.00)
+Autor 'Amanda Lee Hughes' reemplazado por 'Amanda Lee Hughes' (similitud: 1.00)
+Autor 'Steve Peterson' reemplazado por 'Steve Peterson' (similitud: 1.00)
+Autor 'Valerio Lorini' reemplazado por 'Valerio Lorini' (similitud: 1.00)
+Autor 'Carlos Castillo' reemplazado por 'Carlos Castillo' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Heartbeat Resonance: Inducing Non-contact Heartbeat Sensations in the Chest' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Waseem Hassan, Liyue Da, Sonia Elizondo, Kasper Hornbæk:
+Heartbeat Resonance: Inducing Non-contact H...
+Bloque 1: 'Heartbeat Resonance: Inducing Non-contact Heartbeat Sensations in the Chest.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Heartbeat Resonance: Inducing Non-contact Heartbeat Sensations in the Chest.'
+Título más similar encontrado (similitud 0.99): 'Heartbeat Resonance: Inducing Non-contact Heartbeat Sensations in the Chest.'
+Autores extraídos desde DBLP: ['Waseem Hassan', 'Liyue Da', 'Sonia Elizondo', 'Kasper Hornbæk', 'Heartbeat Resonance: Inducing Non-contact Heartbeat Sensations in the Chest.', 'CHI']
+Autor 'Waseem Hassan' reemplazado por 'Waseem Hassan' (similitud: 1.00)
+Autor 'Liyue Da' reemplazado por 'Liyue Da' (similitud: 1.00)
+Autor 'Sonia Elizondo' reemplazado por 'Sonia Elizondo' (similitud: 1.00)
+Autor 'Kasper Hornbæk' reemplazado por 'Kasper Hornbæk' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'With Friends Like These, Who Needs Explanations? Evaluating User Understanding of Group Recommendations' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+2 bloques encontrados en la página de resultados.
+Procesando bloque 1: Cedric Waterschoot, Raciel Yera Toledo, Nava Tintarev, Francesco Barile:
+With Friends Like These, Wh...
+Bloque 1: 'With Friends Like These, Who Needs Explanations? Evaluating User Understanding of Group Recommendations.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'With Friends Like These, Who Needs Explanations? Evaluating User Understanding of Group Recommendations.'
+Procesando bloque 2: Cedric Waterschoot, Raciel Yera Toledo, Nava Tintarev, Francesco Barile:
+With Friends Like These, Wh...
+Bloque 2: 'With Friends Like These, Who Needs Explanations? Evaluating User Understanding of Group Recommendations.' (similitud: 1.00)
+Título más similar encontrado (similitud 1.00): 'With Friends Like These, Who Needs Explanations? Evaluating User Understanding of Group Recommendations.'
+Autores extraídos desde DBLP: ['Cedric Waterschoot', 'Raciel Yera Toledo', 'Nava Tintarev', 'Francesco Barile', 'With Friends Like These, Who Needs Explanations? Evaluating User Understanding of Group Recommendations.', 'UMAP']
+Autor 'Cedric Waterschoot' reemplazado por 'Cedric Waterschoot' (similitud: 1.00)
+Autor 'Raciel Yera Toledo' reemplazado por 'Raciel Yera Toledo' (similitud: 1.00)
+Autor 'Nava Tintarev' reemplazado por 'Nava Tintarev' (similitud: 1.00)
+Autor 'Francesco Barile' reemplazado por 'Francesco Barile' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Data Access under the EU Digital Services Act and its Impact on User Modelling Research' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Erasmo Purificato, Ludovico Boratto, João Vinagre:
+Data Access under the EU Digital Services Act and...
+Bloque 1: 'Data Access under the EU Digital Services Act and its Impact on User Modelling Research.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Data Access under the EU Digital Services Act and its Impact on User Modelling Research.'
+Título más similar encontrado (similitud 0.99): 'Data Access under the EU Digital Services Act and its Impact on User Modelling Research.'
+Autores extraídos desde DBLP: ['Erasmo Purificato', 'Ludovico Boratto', 'João Vinagre', 'Data Access under the EU Digital Services Act and its Impact on User Modelling Research.', 'UMAP (Adjunct Publication)']
+Autor 'Erasmo Purificato' reemplazado por 'Erasmo Purificato' (similitud: 1.00)
+Autor 'Ludovico Boratto' reemplazado por 'Ludovico Boratto' (similitud: 1.00)
+Autor 'João Vinagre' reemplazado por 'João Vinagre' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'From Drawings to Awareness: Exploring Narrative Visualization and AI to Teach Children About the Fragile Ecosystem of the Mar Menor Lagoon' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Gianni Tumedei, Chiara Ceccarini, Inmaculada Concepción Jiménez Navarro, Catia Prandi:
+From Drawings...
+Bloque 1: 'From Drawings to Awareness: Exploring Narrative Visualization and AI to Teach Children About the Fragile Ecosystem of the Mar Menor Lagoon.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'From Drawings to Awareness: Exploring Narrative Visualization and AI to Teach Children About the Fragile Ecosystem of the Mar Menor Lagoon.'
+Título más similar encontrado (similitud 1.00): 'From Drawings to Awareness: Exploring Narrative Visualization and AI to Teach Children About the Fragile Ecosystem of the Mar Menor Lagoon.'
+Autores extraídos desde DBLP: ['Gianni Tumedei', 'Chiara Ceccarini', 'Inmaculada Concepción Jiménez Navarro', 'Catia Prandi', 'From Drawings to Awareness: Exploring Narrative Visualization and AI to Teach Children About the Fragile Ecosystem of the Mar Menor Lagoon.', 'Conference on Designing Interactive Systems']
+Autor 'Gianni Tumedei' reemplazado por 'Gianni Tumedei' (similitud: 1.00)
+Autor 'Chiara Ceccarini' reemplazado por 'Chiara Ceccarini' (similitud: 1.00)
+Autor 'Inmaculada Concepción Jimenez Navarro' reemplazado por 'Inmaculada Concepción Jiménez Navarro' (similitud: 1.00)
+Autor 'Catia Prandi' reemplazado por 'Catia Prandi' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Visualizing Confidence in Delivery Robots: Insights from Two Online Studies' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Ronald Cumbal, Natalia Calvo-Barajas, Marina Escobar-Planas, Alexandros Rouchitsas, Ginevra Castella...
+Bloque 1: 'Visualizing Confidence in Delivery Robots: Insights from Two Online Studies.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Visualizing Confidence in Delivery Robots: Insights from Two Online Studies.'
+Título más similar encontrado (similitud 0.99): 'Visualizing Confidence in Delivery Robots: Insights from Two Online Studies.'
+Autores extraídos desde DBLP: ['Ronald Cumbal', 'Natalia Calvo-Barajas', 'Marina Escobar-Planas', 'Alexandros Rouchitsas', 'Ginevra Castellano', 'Visualizing Confidence in Delivery Robots: Insights from Two Online Studies.', 'CHI Extended Abstracts']
+Autor 'Ronald Cumbal' reemplazado por 'Ronald Cumbal' (similitud: 1.00)
+Autor 'Natalia Calvo-Barajas' reemplazado por 'Natalia Calvo-Barajas' (similitud: 1.00)
+Autor 'Marina Escobar-Planas' reemplazado por 'Marina Escobar-Planas' (similitud: 1.00)
+Autor 'Alexandros Rouchitsas' reemplazado por 'Alexandros Rouchitsas' (similitud: 1.00)
+Autor 'Ginevra Castellano' reemplazado por 'Ginevra Castellano' (similitud: 1.00)
+Iniciando búsqueda en DBLP: '"Living-Alone Girls'  Lives Matter": Exploring the Security and Safety Perceptions and Practices of Young Women Living Alone in China' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Shijing He, Chenkai Ma, Chi Zhang, Ruba Abu-Salma, Jose Such:
+"Living-Alone Girls' Lives Matter": Ex...
+Bloque 1: '"Living-Alone Girls' Lives Matter": Exploring the Security and Safety Perceptions and Practices of Young Women Living Alone in China.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: '"Living-Alone Girls' Lives Matter": Exploring the Security and Safety Perceptions and Practices of Young Women Living Alone in China.'
+Título más similar encontrado (similitud 1.00): '"Living-Alone Girls' Lives Matter": Exploring the Security and Safety Perceptions and Practices of Young Women Living Alone in China.'
+Autores extraídos desde DBLP: ['Shijing He', 'Chenkai Ma', 'Chi Zhang', 'Ruba Abu-Salma', 'Jose Such', '"Living-Alone Girls\' Lives Matter": Exploring the Security and Safety Perceptions and Practices of Young Women Living Alone in China.', 'CHI Extended Abstracts']
+Autor 'Shijing He' reemplazado por 'Shijing He' (similitud: 1.00)
+Autor 'Chenkai Ma' reemplazado por 'Chenkai Ma' (similitud: 1.00)
+Autor 'Chi Zhang' reemplazado por 'Chi Zhang' (similitud: 1.00)
+Autor 'Ruba Abu-Salma' reemplazado por 'Ruba Abu-Salma' (similitud: 1.00)
+Autor 'Jose Such' reemplazado por 'Jose Such' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Towards Personalized Physiotherapy through Interactive Machine Learning: A Conceptual Infrastructure Design for In-Clinic and Out-of-Clinic Support' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Laia Turmo Vidal, Annika Waern, Rosa Cabanas-Valdés, Lauren van Loo, Yinchu Li, Karthik Venkataraman...
+Bloque 1: 'Towards Personalized Physiotherapy through Interactive Machine Learning: A Conceptual Infrastructure Design for In-Clinic and Out-of-Clinic Support.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'Towards Personalized Physiotherapy through Interactive Machine Learning: A Conceptual Infrastructure Design for In-Clinic and Out-of-Clinic Support.'
+Título más similar encontrado (similitud 1.00): 'Towards Personalized Physiotherapy through Interactive Machine Learning: A Conceptual Infrastructure Design for In-Clinic and Out-of-Clinic Support.'
+Autores extraídos desde DBLP: ['Laia Turmo Vidal', 'Annika Waern', 'Rosa Cabanas-Valdés', 'Lauren van Loo', 'Yinchu Li', 'Karthik Venkataraman Meenaakshisundaram', 'Towards Personalized Physiotherapy through Interactive Machine Learning: A Conceptual Infrastructure Design for In-Clinic and Out-of-Clinic Support.', 'CHI']
+Autor 'Laia Turmo Vidal' reemplazado por 'Laia Turmo Vidal' (similitud: 1.00)
+Autor 'Annika Waern' reemplazado por 'Annika Waern' (similitud: 1.00)
+Autor 'Rosa Cabanas-Valdés' reemplazado por 'Rosa Cabanas-Valdés' (similitud: 1.00)
+Autor 'Lauren van Loo' reemplazado por 'Lauren van Loo' (similitud: 1.00)
+Autor 'Yinchu Li' reemplazado por 'Yinchu Li' (similitud: 1.00)
+Autor 'Karthik Venkataraman Meenaakshisundaram' reemplazado por 'Karthik Venkataraman Meenaakshisundaram' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Understanding "Mutes" in Social Virtual Reality' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Qijia Chen, Andrea Bellucci, Jie Cai, Matti Nelimarkka, Giulio Jacucci:
+Understanding "Mutes" in Soc...
+Bloque 1: 'Understanding "Mutes" in Social Virtual Reality.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Understanding "Mutes" in Social Virtual Reality.'
+Título más similar encontrado (similitud 0.99): 'Understanding "Mutes" in Social Virtual Reality.'
+Autores extraídos desde DBLP: ['Qijia Chen', 'Andrea Bellucci', 'Jie Cai', 'Matti Nelimarkka', 'Giulio Jacucci', 'Understanding "Mutes" in Social Virtual Reality.', 'CHI']
+Autor 'Qijia Chen' reemplazado por 'Qijia Chen' (similitud: 1.00)
+Autor 'Andrea Bellucci' reemplazado por 'Andrea Bellucci' (similitud: 1.00)
+Autor 'Jie Cai' reemplazado por 'Jie Cai' (similitud: 1.00)
+Autor 'Matti Nelimarkka' reemplazado por 'Matti Nelimarkka' (similitud: 1.00)
+Autor 'Giulio Jacucci' reemplazado por 'Giulio Jacucci' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Contesting Control with Automation in Technology-Mediated Interactions' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Andriana Boudouraki, Harriet R. Cameron, Gisela Reyes-Cruz, Juan Pablo Martinez-Avila, Marta Orduna,...
+Bloque 1: 'Contesting Control with Automation in Technology-Mediated Interactions.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Contesting Control with Automation in Technology-Mediated Interactions.'
+Título más similar encontrado (similitud 0.99): 'Contesting Control with Automation in Technology-Mediated Interactions.'
+Autores extraídos desde DBLP: ['Andriana Boudouraki', 'Harriet R. Cameron', 'Gisela Reyes-Cruz', 'Juan Pablo Martinez-Avila', 'Marta Orduna', 'Samanta Varela-Castro', 'Laura Kohonen-Aho', 'Contesting Control with Automation in Technology-Mediated Interactions.', 'CHI Extended Abstracts']
+Autor 'Andriana Boudouraki' reemplazado por 'Andriana Boudouraki' (similitud: 1.00)
+Autor 'Harriet R Cameron' reemplazado por 'Harriet R. Cameron' (similitud: 0.97)
+Autor 'Gisela Reyes-Cruz' reemplazado por 'Gisela Reyes-Cruz' (similitud: 1.00)
+Autor 'Juan Pablo Martinez Avila' reemplazado por 'Juan Pablo Martinez-Avila' (similitud: 1.00)
+Autor 'Marta Orduna' reemplazado por 'Marta Orduna' (similitud: 1.00)
+Autor 'Samanta Varela Castro' reemplazado por 'Samanta Varela-Castro' (similitud: 1.00)
+Autor 'Laura Kohonen-Aho' reemplazado por 'Laura Kohonen-Aho' (similitud: 1.00)
+Iniciando búsqueda en DBLP: '2nd International Workshop on Mobile Cognitive-Augmenting and Cognition-Altering Technologies (CAT) in Human-Centered AI' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+0 bloques encontrados en la página de resultados.
+WARNING:root:No se encontró ningún título válido en DBLP.
+Iniciando búsqueda en DBLP: 'Imprinto: Enhancing Infrared Inkjet Watermarking for Human and Machine Perception' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+2 bloques encontrados en la página de resultados.
+Procesando bloque 1: Martin Feick, Xuxin Tang, Raul Garcia-Martin, Alexandru Luchianov, Roderick Wei Xiao Huang, Chang Xi...
+Bloque 1: 'Imprinto: Enhancing Infrared Inkjet Watermarking for Human and Machine Perception.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Imprinto: Enhancing Infrared Inkjet Watermarking for Human and Machine Perception.'
+Procesando bloque 2: Martin Feick, Xuxin Tang, Raul Garcia-Martin, Alexandru Luchianov, Roderick Wei Xiao Huang, Chang Xi...
+Bloque 2: 'Imprinto: Enhancing Infrared Inkjet Watermarking for Human and Machine Perception.' (similitud: 0.99)
+Título más similar encontrado (similitud 0.99): 'Imprinto: Enhancing Infrared Inkjet Watermarking for Human and Machine Perception.'
+Autores extraídos desde DBLP: ['Martin Feick', 'Xuxin Tang', 'Raul Garcia-Martin', 'Alexandru Luchianov', 'Roderick Wei Xiao Huang', 'Chang Xiao', 'Alexa F. Siu', 'Mustafa Doga Dogan', 'Imprinto: Enhancing Infrared Inkjet Watermarking for Human and Machine Perception.', 'CHI']
+Autor 'Martin Feick' reemplazado por 'Martin Feick' (similitud: 1.00)
+Autor 'Xuxin Tang' reemplazado por 'Xuxin Tang' (similitud: 1.00)
+Autor 'Raul Garcia-Martin' reemplazado por 'Raul Garcia-Martin' (similitud: 1.00)
+Autor 'Alexandru Luchianov' reemplazado por 'Alexandru Luchianov' (similitud: 1.00)
+Autor 'Roderick Wei Xiao Huang' reemplazado por 'Roderick Wei Xiao Huang' (similitud: 1.00)
+Autor 'Chang Xiao' reemplazado por 'Chang Xiao' (similitud: 1.00)
+Autor 'Alexa Siu' reemplazado por 'Alexa F. Siu' (similitud: 0.86)
+Autor 'Mustafa Doga Dogan' reemplazado por 'Mustafa Doga Dogan' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Sensorimotor Devices: Coupling Sensing and Actuation to Augment Bodily Experience' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Paul Strohmeier, Laia Turmo Vidal, Gabriela Vega, Courtney N. Reed, Alex Mazursky, Easa AliAbbasi, A...
+Bloque 1: 'Sensorimotor Devices: Coupling Sensing and Actuation to Augment Bodily Experience.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Sensorimotor Devices: Coupling Sensing and Actuation to Augment Bodily Experience.'
+Título más similar encontrado (similitud 0.99): 'Sensorimotor Devices: Coupling Sensing and Actuation to Augment Bodily Experience.'
+Autores extraídos desde DBLP: ['Paul Strohmeier', 'Laia Turmo Vidal', 'Gabriela Vega', 'Courtney N. Reed', 'Alex Mazursky', 'Easa AliAbbasi', 'Ana Tajadura-Jiménez', 'Jürgen Steimle', 'Sensorimotor Devices: Coupling Sensing and Actuation to Augment Bodily Experience.', 'CHI Extended Abstracts']
+Autor 'Paul Strohmeier' reemplazado por 'Paul Strohmeier' (similitud: 1.00)
+Autor 'Laia Turmo Vidal' reemplazado por 'Laia Turmo Vidal' (similitud: 1.00)
+Autor 'Gabriela Vega' reemplazado por 'Gabriela Vega' (similitud: 1.00)
+Autor 'Courtney N. Reed' reemplazado por 'Courtney N. Reed' (similitud: 1.00)
+Autor 'Alex Mazursky' reemplazado por 'Alex Mazursky' (similitud: 1.00)
+Autor 'Easa AliAbbasi' reemplazado por 'Easa AliAbbasi' (similitud: 1.00)
+Autor 'Ana Tajadura-Jiménez' reemplazado por 'Ana Tajadura-Jiménez' (similitud: 1.00)
+Autor 'Jürgen Steimle' reemplazado por 'Jürgen Steimle' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Designing for and with Intimate (Sexual) Bodies - Towards Feminist and Queer Somatic Understandings of Pleasure' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Silvia Teisanu, Nadia Campo Woytuk, Joo Young Park, Anna Brynskov, Dianya Mia Hua, Marianela Ciolfi ...
+Bloque 1: 'Designing for and with Intimate (Sexual) Bodies - Towards Feminist and Queer Somatic Understandings of Pleasure.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'Designing for and with Intimate (Sexual) Bodies - Towards Feminist and Queer Somatic Understandings of Pleasure.'
+Título más similar encontrado (similitud 1.00): 'Designing for and with Intimate (Sexual) Bodies - Towards Feminist and Queer Somatic Understandings of Pleasure.'
+Autores extraídos desde DBLP: ['Silvia Teisanu', 'Nadia Campo Woytuk', 'Joo Young Park', 'Anna Brynskov', 'Dianya Mia Hua', 'Marianela Ciolfi Felice', 'Saúl Baeza Argüello', 'Oscar Tomico', 'Madeline Balaam', 'Designing for and with Intimate (Sexual) Bodies - Towards Feminist and Queer Somatic Understandings of Pleasure.', 'TEI']
+Autor 'Silvia Teisanu' reemplazado por 'Silvia Teisanu' (similitud: 1.00)
+Autor 'Nadia Campo Woytuk' reemplazado por 'Nadia Campo Woytuk' (similitud: 1.00)
+Autor 'Joo Young Park' reemplazado por 'Joo Young Park' (similitud: 1.00)
+Autor 'Anna Brynskov' reemplazado por 'Anna Brynskov' (similitud: 1.00)
+Autor 'Dianya Mia Hua' reemplazado por 'Dianya Mia Hua' (similitud: 1.00)
+Autor 'Marianela Ciolfi Felice' reemplazado por 'Marianela Ciolfi Felice' (similitud: 1.00)
+Autor 'Saúl Baeza Argüello' reemplazado por 'Saúl Baeza Argüello' (similitud: 1.00)
+Autor 'Oscar Tomico' reemplazado por 'Oscar Tomico' (similitud: 1.00)
+Autor 'Madeline Balaam' reemplazado por 'Madeline Balaam' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Designing Age-Inclusive Interfaces: Emerging Conversational and Generative AI to Support Interactions across the Life Span' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+3 bloques encontrados en la página de resultados.
+Procesando bloque 1: Cosmin Munteanu, Sayan Sarcar, Jaisie Sin, Christina Ziying Wei, Sergio Sayago, Wei Zhao, Jenny Wayc...
+Bloque 1: 'Designing Age-Inclusive Interfaces: Emerging Conversational and Generative AI to Support Interactions across the Life Span.' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'Designing Age-Inclusive Interfaces: Emerging Conversational and Generative AI to Support Interactions across the Life Span.'
+Procesando bloque 2: Sayan Sarcar, Cosmin Munteanu, Jaisie Sin, Christina Wei, Sergio Sayago, Wei Zhao, Jenny Waycott:
+De...
+Bloque 2 descartado (no contiene año 2025)
+Procesando bloque 3: Cosmin Munteanu, Sayan Sarcar, Jaisie Sin, Christina Ziying Wei, Sergio Sayago, Wei Zhao, Jenny Wayc...
+Bloque 3 descartado (no contiene año 2025)
+Título más similar encontrado (similitud 1.00): 'Designing Age-Inclusive Interfaces: Emerging Conversational and Generative AI to Support Interactions across the Life Span.'
+Autores extraídos desde DBLP: ['Cosmin Munteanu', 'Sayan Sarcar', 'Jaisie Sin', 'Christina Ziying Wei', 'Sergio Sayago', 'Wei Zhao', 'Jenny Waycott', 'Rezvan Boostani', 'Moojan Ghafurian', 'Cristina Getson', 'Designing Age-Inclusive Interfaces: Emerging Conversational and Generative AI to Support Interactions across the Life Span.', 'CUI']
+Autor 'Cosmin Munteanu' reemplazado por 'Cosmin Munteanu' (similitud: 1.00)
+Autor 'Sayan Sarcar' reemplazado por 'Sayan Sarcar' (similitud: 1.00)
+Autor 'Jaisie Sin' reemplazado por 'Jaisie Sin' (similitud: 1.00)
+Autor 'Christina Ziying Wei' reemplazado por 'Christina Ziying Wei' (similitud: 1.00)
+Autor 'Sergio Sayago' reemplazado por 'Sergio Sayago' (similitud: 1.00)
+Autor 'Wei Zhao' reemplazado por 'Wei Zhao' (similitud: 1.00)
+Autor 'Jenny Waycott' reemplazado por 'Jenny Waycott' (similitud: 1.00)
+Autor 'Rezvan Boostani' reemplazado por 'Rezvan Boostani' (similitud: 1.00)
+Autor 'Moojan Ghafurian' reemplazado por 'Moojan Ghafurian' (similitud: 1.00)
+Autor 'Cristina Getson' reemplazado por 'Cristina Getson' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Cite Your Well-being First: What Happens When Personal Life, Mental Health, and HCI Research Become Entangled?' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Sophia Ppali, Marios Constantinides, Fotis Liarokapis, Jaydon Farao, Soraya S. Anvari, MinYoung Yoo,...
+Bloque 1: 'Cite Your Well-being First: What Happens When Personal Life, Mental Health, and HCI Research Become Entangled?' (similitud: 1.00)
+Nuevo mejor resultado con similitud 1.00: 'Cite Your Well-being First: What Happens When Personal Life, Mental Health, and HCI Research Become Entangled?'
+Título más similar encontrado (similitud 1.00): 'Cite Your Well-being First: What Happens When Personal Life, Mental Health, and HCI Research Become Entangled?'
+Autores extraídos desde DBLP: ['Sophia Ppali', 'Marios Constantinides', 'Fotis Liarokapis', 'Jaydon Farao', 'Soraya S. Anvari', 'MinYoung Yoo', 'Ferran Altarriba Bertran', 'Shannon Rodgers', 'Jihae Han', 'Rina R. Wehbe', 'Margot Brereton', 'Alexandra Covaci', 'Cite Your Well-being First: What Happens When Personal Life, Mental Health, and HCI Research Become Entangled?', 'Conference on Designing Interactive Systems (Companion Volume)']
+Autor 'Sophia Ppali' reemplazado por 'Sophia Ppali' (similitud: 1.00)
+Autor 'Marios Constantinides' reemplazado por 'Marios Constantinides' (similitud: 1.00)
+Autor 'Fotis Liarokapis' reemplazado por 'Fotis Liarokapis' (similitud: 1.00)
+Autor 'Jaydon Farao' reemplazado por 'Jaydon Farao' (similitud: 1.00)
+Autor 'Soraya S. Anvari' reemplazado por 'Soraya S. Anvari' (similitud: 1.00)
+Autor 'MinYoung Yoo' reemplazado por 'MinYoung Yoo' (similitud: 1.00)
+Autor 'Ferran Altarriba Bertran' reemplazado por 'Ferran Altarriba Bertran' (similitud: 1.00)
+Autor 'Shannon Rodgers' reemplazado por 'Shannon Rodgers' (similitud: 1.00)
+Autor 'Jihae Han' reemplazado por 'Jihae Han' (similitud: 1.00)
+Autor 'Rina R. Wehbe' reemplazado por 'Rina R. Wehbe' (similitud: 1.00)
+Autor 'Margot Brereton' reemplazado por 'Margot Brereton' (similitud: 1.00)
+Autor 'Alexandra Covaci' reemplazado por 'Alexandra Covaci' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'MultiplEYE: Creating a multilingual eye-tracking-while-reading corpus' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Deborah Noemie Jakobi, Maja Stegenwallner-Schütz, Nora Hollenstein, Cui Ding, Ramune Kaspere, Ana Ma...
+Bloque 1: 'MultiplEYE: Creating a multilingual eye-tracking-while-reading corpus.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'MultiplEYE: Creating a multilingual eye-tracking-while-reading corpus.'
+Título más similar encontrado (similitud 0.99): 'MultiplEYE: Creating a multilingual eye-tracking-while-reading corpus.'
+Autores extraídos desde DBLP: ['Deborah Noemie Jakobi', 'Maja Stegenwallner-Schütz', 'Nora Hollenstein', 'Cui Ding', 'Ramune Kaspere', 'Ana Matic Skoric', 'Eva Pavlinusic Vilus', 'Stefan Frank', 'Marie-Luise Müller', 'Kristine M. Jensen de López', 'Nik Kharlamov', 'Hanne B. Søndergaard Knudsen', 'Yevgeni Berzak', 'Ella Lion', 'Irina A. Sekerina', 'Cengiz Acartürk', 'Mohd Faizan Ansari', 'Katarzyna Harezlak', 'Pawel Kasprowski', 'Ana Bautista', 'Lisa Beinborn', 'Anna Bondar', 'Antonia Boznou', 'Leah Bradshaw', 'Jana Mara Hofmann', 'Thyra Krosness', 'Not Battesta Soliva', 'Anila Çepani', 'Kristina Cergol', 'Ana Dosen', 'Marijan Palmovic', 'Adelina Çerpja', 'Dalí Chirino', 'Jan Chromý', 'Vera Demberg', 'Iza Skrjanec', 'Nazik Dinçtopal Deniz', 'Inmaculada Fajardo', 'Mariola Giménez-Salvador', 'Xavier Mínguez-López', 'Maros Filip', 'Zigmunds Freibergs', 'Jessica Gomes', 'Andreia Janeiro', 'Paula Luegi', 'João Veríssimo', 'Sasho Gramatikov', 'Jana Hasenäcker', 'Alba Haveriku', 'Nelda Kote', 'Muhammad M. Kamal', 'Hanna Kedzierska', 'Dorota Klimek-Jankowska', 'Sara Kosutar', 'Daniel G. Krakowczyk', 'Izabela Krejtz', 'Marta Lockiewicz', 'Kaidi Lõo', 'Jurgita Motiejuniene', 'Jamal A. Nasir', 'Johanne Sofie Krog Nedergård', 'Aysegül Özkan', 'Mikulás Preininger', 'Loredana Punga', 'David Robert Reich', 'Chiara Tschirner', 'Spela Rot', 'Andreas Säuberli', 'Jordi Solé-Casals', 'Ekaterina Strati', 'Igor Svoboda', 'Evis Trandafili', 'Spyridoula Varlokosta', 'Mila Vulchanova', 'Lena A. Jäger', 'MultiplEYE: Creating a multilingual eye-tracking-while-reading corpus.', 'ETRA']
+Autor 'Deborah Noemie Jakobi' reemplazado por 'Deborah Noemie Jakobi' (similitud: 1.00)
+Autor 'Maja Stegenwallner-Schütz' reemplazado por 'Maja Stegenwallner-Schütz' (similitud: 1.00)
+Autor 'Nora Hollenstein' reemplazado por 'Nora Hollenstein' (similitud: 1.00)
+Autor 'Cui Ding' reemplazado por 'Cui Ding' (similitud: 1.00)
+Autor 'Ramune Kaspere' reemplazado por 'Ramune Kaspere' (similitud: 1.00)
+Autor 'Ana Matić Škorić' reemplazado por 'Ana Matic Skoric' (similitud: 1.00)
+Autor 'Eva Pavlinusic Vilus' reemplazado por 'Eva Pavlinusic Vilus' (similitud: 1.00)
+Autor 'Stefan Frank' reemplazado por 'Stefan Frank' (similitud: 1.00)
+Autor 'Marie-Luise Müller' reemplazado por 'Marie-Luise Müller' (similitud: 1.00)
+Autor 'Kristine M Jensen de López' reemplazado por 'Kristine M. Jensen de López' (similitud: 0.98)
+Autor 'Nik Kharlamov' reemplazado por 'Nik Kharlamov' (similitud: 1.00)
+Autor 'Hanne B. Søndergaard Knudsen' reemplazado por 'Hanne B. Søndergaard Knudsen' (similitud: 1.00)
+Autor 'Yevgeni Berzak' reemplazado por 'Yevgeni Berzak' (similitud: 1.00)
+Autor 'Ella Lion' reemplazado por 'Ella Lion' (similitud: 1.00)
+Autor 'Irina A. Sekerina' reemplazado por 'Irina A. Sekerina' (similitud: 1.00)
+Autor 'Cengiz Acarturk' reemplazado por 'Cengiz Acartürk' (similitud: 1.00)
+Autor 'Mohd Faizan Ansari' reemplazado por 'Mohd Faizan Ansari' (similitud: 1.00)
+Autor 'Katarzyna Harezlak' reemplazado por 'Katarzyna Harezlak' (similitud: 1.00)
+Autor 'Pawel Kasprowski' reemplazado por 'Pawel Kasprowski' (similitud: 1.00)
+Autor 'Ana Bautista' reemplazado por 'Ana Bautista' (similitud: 1.00)
+Autor 'Lisa Beinborn' reemplazado por 'Lisa Beinborn' (similitud: 1.00)
+Autor 'Anna Bondar' reemplazado por 'Anna Bondar' (similitud: 1.00)
+Autor 'Antonia Boznou' reemplazado por 'Antonia Boznou' (similitud: 1.00)
+Autor 'Leah Bradshaw' reemplazado por 'Leah Bradshaw' (similitud: 1.00)
+Autor 'Jana Mara Hofmann' reemplazado por 'Jana Mara Hofmann' (similitud: 1.00)
+Autor 'Thyra Krosness' reemplazado por 'Thyra Krosness' (similitud: 1.00)
+Autor 'Not Battesta Soliva' reemplazado por 'Not Battesta Soliva' (similitud: 1.00)
+Autor 'Anila Çepani' reemplazado por 'Anila Çepani' (similitud: 1.00)
+Autor 'Kristina Cergol' reemplazado por 'Kristina Cergol' (similitud: 1.00)
+Autor 'Ana Došen' reemplazado por 'Ana Dosen' (similitud: 1.00)
+Autor 'Marijan Palmovic' reemplazado por 'Marijan Palmovic' (similitud: 1.00)
+Autor 'Adelina Çerpja' reemplazado por 'Adelina Çerpja' (similitud: 1.00)
+Autor 'Dalı́ Chirino' reemplazado por 'Dalí Chirino' (similitud: 0.92)
+Autor 'Jan Chromý' reemplazado por 'Jan Chromý' (similitud: 1.00)
+Autor 'Vera Demberg' reemplazado por 'Vera Demberg' (similitud: 1.00)
+Autor 'Iza Škrjanec' reemplazado por 'Iza Skrjanec' (similitud: 1.00)
+Autor 'Nazik Dinçtopal Deniz' reemplazado por 'Nazik Dinçtopal Deniz' (similitud: 1.00)
+Autor 'Dr. Inmaculada Fajardo' reemplazado por 'Inmaculada Fajardo' (similitud: 0.90)
+Autor 'Mariola Giménez-Salvador' reemplazado por 'Mariola Giménez-Salvador' (similitud: 1.00)
+Autor 'Xavier M\ńguez-López' reemplazado por 'Xavier Mínguez-López' (similitud: 0.95)
+Autor 'Maroš Filip' reemplazado por 'Maros Filip' (similitud: 1.00)
+Autor 'Zigmunds Freibergs' reemplazado por 'Zigmunds Freibergs' (similitud: 1.00)
+Autor 'Jéssica Gomes' reemplazado por 'Jessica Gomes' (similitud: 1.00)
+Autor 'Andreia Janeiro' reemplazado por 'Andreia Janeiro' (similitud: 1.00)
+Autor 'Paula Luegi' reemplazado por 'Paula Luegi' (similitud: 1.00)
+Autor 'João Ver\'śimo' reemplazado por 'João Veríssimo' (similitud: 0.89)
+Autor 'Sasho Gramatikov' reemplazado por 'Sasho Gramatikov' (similitud: 1.00)
+Autor 'Jana Hasenäcker' reemplazado por 'Jana Hasenäcker' (similitud: 1.00)
+Autor 'Alba Haveriku' reemplazado por 'Alba Haveriku' (similitud: 1.00)
+Autor 'Nelda Kote' reemplazado por 'Nelda Kote' (similitud: 1.00)
+Autor 'Muhammad M. Kamal' reemplazado por 'Muhammad M. Kamal' (similitud: 1.00)
+Autor 'Hanna Kundefineddzierska' reemplazado por 'Hanna Kedzierska' (similitud: 0.80)
+Autor 'Dorota Klimek-Jankowska' reemplazado por 'Dorota Klimek-Jankowska' (similitud: 1.00)
+Autor 'Sara Kosutar' reemplazado por 'Sara Kosutar' (similitud: 1.00)
+Autor 'Daniel G. Krakowczyk' reemplazado por 'Daniel G. Krakowczyk' (similitud: 1.00)
+Autor 'Izabela Krejtz' reemplazado por 'Izabela Krejtz' (similitud: 1.00)
+Autor 'Marta Łockiewicz' reemplazado por 'Marta Lockiewicz' (similitud: 0.94)
+Autor 'Kaidi Lõo' reemplazado por 'Kaidi Lõo' (similitud: 1.00)
+Autor 'Jurgita Motiejūnienundefined' reemplazado por 'Jurgita Motiejuniene' (similitud: 0.83)
+Autor 'Jamal A. Nasir' reemplazado por 'Jamal A. Nasir' (similitud: 1.00)
+Autor 'Johanne Sofie Krog Nedergård' reemplazado por 'Johanne Sofie Krog Nedergård' (similitud: 1.00)
+Autor 'Ayşegül Özkan' reemplazado por 'Aysegül Özkan' (similitud: 1.00)
+Autor 'Mikuláš Preininger' reemplazado por 'Mikulás Preininger' (similitud: 1.00)
+Autor 'Loredana Pungă' reemplazado por 'Loredana Punga' (similitud: 1.00)
+Autor 'David Robert Reich' reemplazado por 'David Robert Reich' (similitud: 1.00)
+Autor 'Chiara Tschirner' reemplazado por 'Chiara Tschirner' (similitud: 1.00)
+Autor 'Špela Rot' reemplazado por 'Spela Rot' (similitud: 1.00)
+Autor 'Andreas Säuberli' reemplazado por 'Andreas Säuberli' (similitud: 1.00)
+Autor 'Jordi Solé-Casals' reemplazado por 'Jordi Solé-Casals' (similitud: 1.00)
+Autor 'Ekaterina Strati' reemplazado por 'Ekaterina Strati' (similitud: 1.00)
+Autor 'Igor Svoboda' reemplazado por 'Igor Svoboda' (similitud: 1.00)
+Autor 'Evis Trandafili' reemplazado por 'Evis Trandafili' (similitud: 1.00)
+Autor 'Spyridoula Varlokosta' reemplazado por 'Spyridoula Varlokosta' (similitud: 1.00)
+Autor 'Mila Vulchanova' reemplazado por 'Mila Vulchanova' (similitud: 1.00)
+Autor 'Lena A. Jäger' reemplazado por 'Lena A. Jäger' (similitud: 1.00)
+Iniciando búsqueda en DBLP: 'Conducting Ethical Research on Emerging Technologies for Children' para el año 2025
+Abriendo URL en el navegador...
+Esperando resolución del CAPTCHA...
+Driver listo y CAPTCHA gestionado correctamente.
+Verificando que la página está correctamente cargada...
+Página abierta correctamente
+Esperando campo de búsqueda...
+Campo de búsqueda localizado. Enviando título...
+Consulta enviada.
+Buscando bloques de resultados...
+1 bloques encontrados en la página de resultados.
+Procesando bloque 1: Juan Pablo Hourcade, Ewelina Bakala, Elizabeth Bonsignore, Flannery Hope Currin, Jerry Alan Fails, A...
+Bloque 1: 'Conducting Ethical Research on Emerging Technologies for Children.' (similitud: 0.99)
+Nuevo mejor resultado con similitud 0.99: 'Conducting Ethical Research on Emerging Technologies for Children.'
+Título más similar encontrado (similitud 0.99): 'Conducting Ethical Research on Emerging Technologies for Children.'
+Autores extraídos desde DBLP: ['Juan Pablo Hourcade', 'Ewelina Bakala', 'Elizabeth Bonsignore', 'Flannery Hope Currin', 'Jerry Alan Fails', 'Amy Gilhoi', 'Nuria Medina-Medina', 'Delaney Norris', 'Meredith Onions', 'Ana Cristina Pires', 'Greg Walsh', 'Svetlana Yarosh', 'Jason C. Yip', 'Conducting Ethical Research on Emerging Technologies for Children.', 'CHI Extended Abstracts']
+Autor 'Juan Pablo Hourcade' reemplazado por 'Juan Pablo Hourcade' (similitud: 1.00)
+Autor 'Ewelina Bakala' reemplazado por 'Ewelina Bakala' (similitud: 1.00)
+Autor 'Elizabeth Bonsignore' reemplazado por 'Elizabeth Bonsignore' (similitud: 1.00)
+Autor 'Flannery Hope Currin' reemplazado por 'Flannery Hope Currin' (similitud: 1.00)
+Autor 'Jerry Alan Fails' reemplazado por 'Jerry Alan Fails' (similitud: 1.00)
+Autor 'Amy Gilhoi' reemplazado por 'Amy Gilhoi' (similitud: 1.00)
+Autor 'Nuria Medina Medina' reemplazado por 'Nuria Medina-Medina' (similitud: 1.00)
+Autor 'Delaney Norris' reemplazado por 'Delaney Norris' (similitud: 1.00)
+Autor 'Meredith Onions' reemplazado por 'Meredith Onions' (similitud: 1.00)
+Autor 'Ana Cristina Pires' reemplazado por 'Ana Cristina Pires' (similitud: 1.00)
+Autor 'Greg Walsh' reemplazado por 'Greg Walsh' (similitud: 1.00)
+Autor 'Svetlana Yarosh' reemplazado por 'Svetlana Yarosh' (similitud: 1.00)
+Autor 'Jason Yip' reemplazado por 'Jason C. Yip' (similitud: 0.86)
+INFO:     10.117.129.37:33550 - "POST /actualizar_datos/?ano_inicio=2025&ano_fin=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56918 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56926 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56938 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56950 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56962 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56976 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34158 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34174 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34190 - "GET /ranking/autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34214 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34224 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34238 - "GET /ranking/autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34204 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34244 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34246 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34258 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48164 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48174 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48182 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48494 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48508 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48514 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48520 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48530 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48540 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48548 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48552 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48556 - "GET /ranking/autores?year_start=2024&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48562 - "POST /exportar_csv/ranking_autores?year_start=2024&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48574 - "POST /exportar_csv/ranking_autores?year_start=2024&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:48584 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47530 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47542 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:47546 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56020 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56026 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44806 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:44808 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58804 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58820 - "GET /estadisticas/publicaciones_espanolas?year_start=2024&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58824 - "POST /exportar_csv/publicaciones_espanolas?year_start=2024&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58828 - "POST /exportar_csv/publicaciones_espanolas?year_start=2024&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58836 - "POST /exportar_csv/publicaciones_espanolas?year_start=2024&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:58852 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:55786 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:55798 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:55802 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:55818 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52814 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52830 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52834 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52840 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57014 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57016 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57024 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57030 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57038 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57050 - "GET /estadisticas/publicaciones_espanolas?year_start=2022&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57056 - "POST /exportar_csv/publicaciones_espanolas?year_start=2022&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57060 - "POST /exportar_csv/publicaciones_espanolas?year_start=2022&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57070 - "POST /exportar_csv/publicaciones_espanolas?year_start=2022&year_end=2024 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57080 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56204 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56208 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56210 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:56222 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43290 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43302 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43316 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43328 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43336 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43338 - "GET /estadisticas/publicaciones_espanolas?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43344 - "POST /exportar_csv/publicaciones_espanolas?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43358 - "POST /exportar_csv/publicaciones_espanolas?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43364 - "POST /exportar_csv/publicaciones_espanolas?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43368 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43376 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43392 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:43400 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50820 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50832 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:55042 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:55044 - "GET /estadisticas/palabras_clave?year_start=2025&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:55050 - "POST /exportar_csv/palabras_clave?year_start=2025&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:55066 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:55080 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:55088 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [175029]
+INFO:     Started server process [221433]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.117.129.37:33406 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33422 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33434 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50124 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50132 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50144 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50158 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50172 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50184 - "GET /ranking/autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50186 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50188 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50194 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52264 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52276 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52292 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52304 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52306 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52310 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.115.48.7:43743 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.115.48.7:43743 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.115.48.7:47965 - "GET /ranking/autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.115.48.7:40052 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.115.48.7:13048 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.115.48.7:13048 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [221433]
+Usage: streamlit run [OPTIONS] TARGET [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: app.py
+Usage: streamlit run [OPTIONS] TARGET [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: app.py
+INFO:     Started server process [230147]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.115.48.7:5925 - "GET /docs HTTP/1.1" 200 OK
+INFO:     10.115.48.7:5925 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52884 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52886 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52902 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52914 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52916 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52928 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52942 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52946 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52962 - "GET /ranking/autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52964 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:52974 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59228 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59240 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59252 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:59254 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33090 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33092 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33106 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54182 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54194 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54202 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54206 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54222 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54238 - "GET /ranking/conferencia?year_start=2025&year_end=2025&conferencia=ABIS HTTP/1.1" 200 OK
+INFO:     10.117.129.37:54242 - "POST /exportar_csv/ranking_conferencia?year_start=2025&year_end=2025&conferencia=ABIS HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:54250 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37344 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37356 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37362 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37372 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37376 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37388 - "GET /ranking/conferencia?year_start=2025&year_end=2025&conferencia=AH HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37402 - "POST /exportar_csv/ranking_conferencia?year_start=2025&year_end=2025&conferencia=AH HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:37412 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37418 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37432 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37446 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37450 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37452 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37456 - "GET /ranking/conferencia?year_start=2025&year_end=2025&conferencia=AGENTS HTTP/1.1" 200 OK
+INFO:     10.117.129.37:37468 - "POST /exportar_csv/ranking_conferencia?year_start=2025&year_end=2025&conferencia=AGENTS HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:37478 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41220 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41234 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41248 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41258 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41268 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41272 - "GET /ranking/conferencia?year_start=2025&year_end=2025&conferencia=CHI+EA HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41280 - "POST /exportar_csv/ranking_conferencia?year_start=2025&year_end=2025&conferencia=CHI+EA HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41284 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39670 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39680 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39694 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51524 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51538 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:51548 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60580 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60586 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60590 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60602 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60610 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60626 - "GET /ranking/autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60630 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60644 - "POST /exportar_csv/ranking_autores?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:60650 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45624 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45628 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45638 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45646 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45656 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45662 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45674 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45688 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45692 - "GET /ranking/conferencia?year_start=2025&year_end=2025&conferencia=AH HTTP/1.1" 200 OK
+INFO:     10.117.129.37:45694 - "POST /exportar_csv/ranking_conferencia?year_start=2025&year_end=2025&conferencia=AH HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:45698 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35436 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35438 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35454 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35458 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35460 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35468 - "GET /ranking/conferencia?year_start=2025&year_end=2025&conferencia=CHI+EA HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35472 - "POST /exportar_csv/ranking_conferencia?year_start=2025&year_end=2025&conferencia=CHI+EA HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35476 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33982 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:33988 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34004 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34018 - "GET /estadisticas/palabras_clave?year_start=2025&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34020 - "POST /exportar_csv/palabras_clave?year_start=2025&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34026 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57706 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57720 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57724 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57730 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34388 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34398 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34406 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34422 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34428 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34444 - "GET /estadisticas/palabras_clave?year_start=2025&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34446 - "POST /exportar_csv/palabras_clave?year_start=2025&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:34448 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [230147]
+INFO:     Started server process [258619]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     10.117.129.37:36866 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36876 - "GET /conferencias_unicas HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36878 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36888 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36890 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36904 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36920 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36932 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36946 - "GET /estadisticas/palabras_clave?year_start=2025&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36960 - "POST /exportar_csv/palabras_clave?year_start=2025&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:36964 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40874 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40890 - "GET /estadisticas/palabras_clave?year_start=2025&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40904 - "POST /exportar_csv/palabras_clave?year_start=2025&year_end=2025&top=20 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40920 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40324 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40326 - "GET /estadisticas/palabras_clave?year_start=2025&year_end=2025&top=30 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40338 - "POST /exportar_csv/palabras_clave?year_start=2025&year_end=2025&top=30 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40342 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40348 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:40364 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39116 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:39120 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57248 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57258 - "GET /estadisticas/publicaciones_espanolas?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57266 - "POST /exportar_csv/publicaciones_espanolas?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57270 - "POST /exportar_csv/publicaciones_espanolas?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57272 - "POST /exportar_csv/publicaciones_espanolas?year_start=2025&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57274 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57276 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57278 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57286 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:57288 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35296 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35308 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35310 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35318 - "GET /estadisticas/evolucion_autor?year_start=2025&year_end=2025&autor=Ignacio+Aedo HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35322 - "GET /autores/existe?autor=Ignacio+Aedo HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35324 - "POST /exportar_csv/evolucion_autor?year_start=2025&year_end=2025&autor=Ignacio+Aedo HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:35336 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35350 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35356 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35360 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35366 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35372 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35378 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35388 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35394 - "GET /estadisticas/evolucion_autor?year_start=2022&year_end=2025&autor=Ignacio+Aedo HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35408 - "GET /autores/existe?autor=Ignacio+Aedo HTTP/1.1" 200 OK
+INFO:     10.117.129.37:35412 - "POST /exportar_csv/evolucion_autor?year_start=2022&year_end=2025&autor=Ignacio+Aedo HTTP/1.1" 404 Not Found
+INFO:     10.117.129.37:35420 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50374 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50380 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50396 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50408 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50410 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50420 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50422 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50428 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50438 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50444 - "GET /estadisticas/evolucion_autor?year_start=2018&year_end=2025&autor=Ignacio+Aedo HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50452 - "POST /exportar_csv/evolucion_autor?autor=Ignacio+Aedo&year_start=2018&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50456 - "POST /exportar_csv/evolucion_autor?year_start=2018&year_end=2025&autor=Ignacio+Aedo HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50458 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50468 - "POST /exportar_csv/evolucion_autor?autor=Ignacio+Aedo&year_start=2018&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50480 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50484 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50488 - "POST /exportar_csv/evolucion_autor?autor=Ignacio+Aedo&year_start=2019&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50494 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50500 - "GET /estadisticas/evolucion_autor?year_start=2019&year_end=2025&autor=Ignacio+Aedo HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50512 - "POST /exportar_csv/evolucion_autor?autor=Ignacio+Aedo&year_start=2019&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50522 - "POST /exportar_csv/evolucion_autor?year_start=2019&year_end=2025&autor=Ignacio+Aedo HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50524 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50530 - "POST /exportar_csv/evolucion_autor?autor=Ignacio+Aedo&year_start=2019&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50540 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50552 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50568 - "POST /exportar_csv/evolucion_autor?autor=Ignacio+Aedo&year_start=2019&year_end=2025 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41760 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41774 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41790 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41792 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41804 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41814 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41820 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41824 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41840 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41846 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41848 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41854 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41866 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41872 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41874 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41878 - "GET /estadisticas/coautorias?year_start=2025&year_end=2025&top=20&min_papers=2 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41880 - "POST /exportar_csv/coautorias?year_start=2025&year_end=2025&top=20&min_papers=2 HTTP/1.1" 200 OK
+INFO:     10.117.129.37:41882 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50330 - "GET /limites/anios HTTP/1.1" 200 OK
+INFO:     10.117.129.37:50332 - "GET /estado/ultima_actualizacion HTTP/1.1" 200 OK

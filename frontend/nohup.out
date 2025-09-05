@@ -1,1 +1,5 @@
 ERROR:    Error loading ASGI app. Could not import module "main".
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+2025-09-05 08:35:20.879 Port 3000 is already in use
