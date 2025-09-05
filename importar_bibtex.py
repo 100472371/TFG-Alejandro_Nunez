@@ -25,7 +25,7 @@ import shutil
 # Evitar problemas de bloqueos de IP
 def lanzar_tor_en_segundo_plano():
     tor_path = os.path.join(BASE_DIR, "tor-browser", "Browser", "TorBrowser", "Tor", "tor")
-    logging.info("⏳ Lanzando Tor en segundo plano...")
+    logging.info("Lanzando Tor en segundo plano...")
 
     try:
         tor_process = subprocess.Popen(
